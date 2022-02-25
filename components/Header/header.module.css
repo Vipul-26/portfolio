@@ -1,0 +1,175 @@
+.header {
+    position: fixed;
+    top: 0;
+    padding: 0px 50px;
+    background-color: #000;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 11;
+    filter: none !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+    width: 100%;
+}
+
+.header nav {
+    position: relative;
+    width: 100%;
+    color: #d4d4d4;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    counter-reset: item 0;
+    z-index: 12;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    align-items: center;
+}
+
+.logo a {
+    display: block;
+    color: #fece2f;
+    width: 42px;
+    height: 42px;
+}
+
+.logo a span {
+    position: absolute;
+    top: 28.5px;
+    left: 15px;
+    font-size: 20px;
+}
+
+.logo:hover svg {
+    fill: rgba(254, 206, 47, 0.2);
+}
+
+.links {
+    display: flex;
+}
+
+.linkOl {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkAnchor {
+    padding: 10px 15px;
+    counter-increment: item 1;
+    font-size: 20px;
+}
+
+.linkAnchor:hover {
+    background-color: rgba(254, 206, 47, 0.2);
+    border-radius: 3px;
+}
+
+.link ol li a:active, .link ol li a:hover {
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.linkAnchor:before {
+    content: "0"counter(item) ". ";
+    text-align: right;
+    color: #fece2f;
+    font-size: 18px;
+}
+
+.resumeButton {
+    margin: 1rem;
+    color: #fece2f;
+    background-color: transparent;
+    border: 2px solid #fece2f;
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    ;
+}
+
+.resumeButton:hover {
+    background-color: rgba(254, 206, 47, 0.2);
+}
+
+.hamburger {
+    overflow: visible;
+    margin: 0 -12px 0 0;
+    padding: 15px;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: 0.15s;
+    transition-property: opacity, filter;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+    display: none;
+}
+
+.hamburgerBox {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+}
+
+.hamburgerInner {
+    background-color: #fece2f;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transition-duration: 0.22s;
+    transition-property: transform;
+}
+
+.hamburgerInner::before, .hamburgerInner::after {
+    content: "";
+    display: block;
+    background-color: #fece2f;
+    position: absolute;
+    left: auto;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    border-radius: 4px;
+}
+
+@media (max-width: 1023px) {
+    .header {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        padding: 0 25px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 12;
+    }
+
+    .logo a span {
+        top: 14.5px;
+    }
+
+    .header nav {
+        margin-top: 1rem;
+    }
+}
