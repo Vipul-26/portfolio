@@ -19,7 +19,7 @@ const About = () => {
       <div className={styles.aboutFlexContainer}>
         <div className={styles.aboutContent}>
           <p className='mb-3'>
-            Hello! I&lsquo;m Vipul, a Frontend developer based in Sasaram,
+            Hello! I&lsquo;m Vipul, a Front-End developer based in Sasaram,
             India, who is happily writing code for responsive websites since 2020.
           </p>
           <p className='mb-3'>

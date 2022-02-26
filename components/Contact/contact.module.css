@@ -15,7 +15,7 @@
 
 .section {
     margin: 0 auto;
-    padding: 150px 0;
+    padding: 120px 0;
     padding-bottom: 80px;
     max-width: 1000px;
 }
@@ -28,7 +28,7 @@
 
 .headingCenter {
     display: block;
-    color: #fece2f;
+    color: var(--primary-color);
     font-size: 16px;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
     font-weight: normal;
@@ -37,11 +37,11 @@
 }
 
 .headingCenter:before {
-    content: "03" ".";
+    content: "04" ".";
     margin-right: 10px;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
     font-weight: normal;
-    color: #fece2f;
+    color: var(--primary-color);
     font-size: 20px;
     position: relative;
     bottom: 0;
@@ -53,9 +53,9 @@
 }
 
 .sayHello {
-    color: #fece2f;
+    color: var(--primary-color);
     background-color: transparent;
-    border: 2px solid #fece2f;
+    border: 2px solid var(--primary-color);
     border-radius: 3px;
     padding: 1.25rem 1.75rem;
     font-size: 16px;
@@ -67,7 +67,7 @@
 }
 
 .sayHello:hover {
-    background-color: rgba(254, 206, 47, 0.2);
+    background-color: var(--primaryLight-color);
 }
 
 @media (max-width: 1023px) {

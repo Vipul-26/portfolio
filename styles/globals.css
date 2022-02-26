@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: theme(colors.primary);
+  --primaryLight-color: theme(colors.primaryLight);
+  --secondary-color: theme(colors.secondary);
+  --secondaryLight-color: theme(colors.secondaryLight);
+  --secondaryLighter-color: theme(colors.secondaryLighter);
+  --secondaryLightest-color: theme(colors.secondaryLightest);
+  --tertiary-color: theme(colors.tertiary);
+  --tertiaryLight-color: theme(colors.tertiaryLight);
+  --tertiaryLighter-color: theme(colors.tertiaryLighter);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #000;
-  color: #929292;
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
   line-height: 1.2;
   font: Calibre,"San Francisco","SF Pro Text",-apple-system,system-ui,BlinkMacSystemFont,Roboto,"Helvetica Neue","Segoe UI",Arial,sans-serif;
 }

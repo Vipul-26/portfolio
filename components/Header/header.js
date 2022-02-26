@@ -18,6 +18,10 @@ const navigation = [
         to: "/#experience",
     },
     {
+        name: "Projects",
+        to: "/#projects",
+    },
+    {
         name: "Contact",
         to: "/#contact",
     },
@@ -77,7 +81,7 @@ class Header extends React.PureComponent {
                             transition-delay: ${isMenuOpen ? '0.12s' : '0s'};
                             transform: rotate(${isMenuOpen ? '225deg' : '0deg'})!important;
                             transition-timing-function: cubic-bezier(${isMenuOpen ? '0.215, 0.61, 0.355, 1' : '0.55, 0.055, 0.675, 0.19'
-                                        });
+                        });
                         }
                         .${styles.hamburgerInner}::before{
                             width:${isMenuOpen ? '100%' : '120%'};

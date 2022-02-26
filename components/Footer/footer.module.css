@@ -2,15 +2,15 @@
     display: flex;
     flex-direction: column;
     padding: 12px;
-    background-color: #0a0a0a;
-    color: #929292;
+    background-color: var(--secondaryLight-color);
+    color: var(--tertiary-color);
     text-align: center;
     height: auto;
     min-height: 70px;
 }
 
 .content {
-    color: #d4d4d4;
+    color: var(--tertiaryLight-color);
     width: 100%;
     margin: 13px 0;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
@@ -19,7 +19,7 @@
 }
 
 .content a {
-    color: #d4d4d4;
+    color: var(--tertiaryLight-color);
 }
 
 .content a div {
@@ -33,7 +33,7 @@
 }
 
 .socialContainer {
-    color: #d4d4d4;
+    color: var(--tertiaryLight-color);
     width: 100%;
     max-width: 270px;
     margin: 0 auto 10px;

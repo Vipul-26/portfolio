@@ -12,7 +12,7 @@ const Hero = () => {
       </h3>
       <div className={classnames(styles.description, 'mt-6')}>
         <p>
-          I&lsquo;m a Frontend  developer based in Sasaram, India,
+          I&lsquo;m a Front-End  developer based in Sasaram, India,
           specializing in developing high-quality websites with latest
           technologies & best practices.
         </p>

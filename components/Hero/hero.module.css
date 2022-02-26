@@ -1,5 +1,5 @@
 .overline {
-    color: #fece2f;
+    color: var(--primary-color);
     margin: 0 0 20px 3px;
     font-size: 18px;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
@@ -15,7 +15,7 @@
 .subtitle {
     font-size: 80px;
     line-height: 1;
-    color: #929292;
+    color: var(--tertiary-color);
 }
 
 .description {
@@ -30,9 +30,9 @@
 }
 
 .getIntouch {
-    color: #fece2f;
+    color: var(--primary-color);
     background-color: transparent;
-    border: 2px solid #fece2f;
+    border: 2px solid var(--primary-color);
     border-radius: 3px;
     padding: 1.25rem 1.75rem;
     font-size: 16px;
@@ -45,7 +45,7 @@
 }
 
 .getIntouch:hover {
-    background-color: rgba(254, 206, 47, 0.2);
+    background-color: var(--primaryLight-color);
 }
 
 .section {
