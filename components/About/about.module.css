@@ -1,0 +1,160 @@
+.aboutFlexContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.aboutContent {
+    width: 60%;
+    max-width: 480px;
+}
+
+.aboutContent a {
+    display: inline;
+    margin: 0 3.5px;
+}
+
+.aboutContent ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.aboutContent ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-size: 16px;
+    color: #929292;
+}
+
+.aboutContent ul li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #fece2f;
+    font-size: 14px;
+    line-height: 12px;
+    margin-top: 5px;
+}
+
+.aboutContent p {
+    line-height: 1.5;
+}
+
+.aboutContent p a {
+    color: #fece2f;
+}
+
+.aboutContent p a:hover {
+    text-decoration: underline;
+    outline: none;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.aboutPic {
+    position: relative;
+    width: 40%;
+    max-width: 300px;
+    margin-left: 60px;
+}
+
+.aboutPic a {
+    width: 100%;
+    position: absolute;
+    border-radius: 3px;
+    margin-left: -20px;
+    top: 15px;
+    left: 15px;
+}
+
+.section {
+    margin: 0 auto;
+    min-width: 1000px;
+}
+
+.heading {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin: 10px 0 40px;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 32px;
+}
+
+.heading:before {
+    counter-increment: section;
+    content: "0"counter(section) ".";
+    margin-right: 10px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-weight: normal;
+    color: #fece2f;
+    font-size: 20px;
+    position: relative;
+    bottom: 4px;
+}
+
+.heading:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 300px;
+    background-color: #929292;
+    position: relative;
+    top: -10px;
+    margin-left: 20px;
+}
+
+@media (max-width: 1023px) {
+    .aboutFlexContainer {
+        display: block;
+    }
+
+    .aboutContent {
+        width: 100%;
+    }
+
+    .aboutPic {
+        margin: 60px auto 0;
+        width: 70%;
+    }
+
+    .section {
+        padding: 100px 0;
+    }
+
+    .heading:after {
+        width: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .aboutPic {
+        width: 70% !important;
+    }
+
+    .section {
+        padding-top: 150px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .heading:before {
+        font-size: var(--fs-lg);
+    }
+
+    .heading:after {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading:after {
+        margin-left: 10px;
+    }
+}
