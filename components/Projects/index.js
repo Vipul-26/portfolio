@@ -33,11 +33,11 @@ const Projects = () => {
             links: [
                 {
                     iconName: 'github',
-                    url: 'https://github.com/abhisharkjangir/reactgo',
+                    url: '',
                 },
                 {
                     iconName: 'external',
-                    url: 'https://reactgo.abhisharjangir.com',
+                    url: '',
                 },
             ],
         },
@@ -51,7 +51,7 @@ const Projects = () => {
                 'redux-logger',
                 'axios',
                 'material-ui',
-                'server-side-rendering',
+                'client-side-rendering',
                 'seo-friendly',
                 'css3',
             ],

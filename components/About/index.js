@@ -55,7 +55,7 @@ const About = () => {
           </ul>
           <p className="mt-2">
             Click
-            <a href='/' download="VipulResume">
+            <a href="/Vipul's Resume.pdf" download="VipulResume">
                here
             </a>
             to download my resume.

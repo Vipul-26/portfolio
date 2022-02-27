@@ -22,9 +22,8 @@
     border-left: 3px solid var(--tertiary-color);
     text-align: left;
     white-space: nowrap;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-family: "Lucida Console";
     font-size: 15px;
-    color: var(--bg-c-light-grey);
 }
 
 .jobTabs .tablist li button:hover, .jobTabs .tablist li button:focus {
@@ -86,7 +85,7 @@
 }
 
 .jobDetail {
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-family: "Lucida Console";
     font-size: 15px;
     font-weight: normal;
     letter-spacing: 0.5px;
@@ -143,7 +142,7 @@
 .heading:before {
     content: "02"".";
     margin-right: 10px;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-family: "Lucida Console";
     font-weight: normal;
     color: var(--primary-color);
     font-size: 20px;
@@ -170,10 +169,18 @@
 
     .section {
         padding: 100px 0;
+        max-width: 1000px !important;
     }
 
     .heading:after {
-        width: 200px;
+        width: inherit;
+    }
+
+    .jobTabs .tablist li button {
+        padding: 0 10px 2px;
+        font-family: system-ui;
+        font-size: 16px;
+        letter-spacing: 1px;
     }
 }
 
@@ -212,20 +219,27 @@
         min-width: 120px;
     }
 
+    .jobTitle {
+        font-size: 19px;
+    }
+
     .jobContent {
         padding-left: 0;
     }
 
     .section {
-        padding-top: 150px;
+        padding-top: 100px;
+        padding-bottom: 25px;
     }
 
     .heading {
-        font-size: 24px;
+        font-size: 20px;
+        align-items: end;
     }
 
     .heading:before {
-        font-size: var(--fs-lg);
+        font-size: 18px;
+        bottom: 1px;
     }
 
     .heading:after {

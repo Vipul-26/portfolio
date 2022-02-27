@@ -8,3 +8,16 @@
 .home div {
     width: 100%;
 }
+
+@media screen and (max-width: 1023px) {
+    .home {
+        min-inline-size: min-content;
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .home {
+        padding: 0 25px;
+    }
+}

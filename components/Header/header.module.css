@@ -15,7 +15,7 @@
     position: relative;
     width: 100%;
     color: var(--tertiaryLight-color);
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-family: "Lucida Console";
     counter-reset: item 0;
     z-index: 12;
     display: flex;
@@ -86,7 +86,7 @@
     border: 2px solid var(--primary-color);
     border-radius: 3px;
     padding: 0.75rem 1rem;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-family: "Lucida Console";
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
@@ -152,12 +152,6 @@
     .header {
         padding: 0 40px;
     }
-}
-
-@media (max-width: 767px) {
-    .header {
-        padding: 0 25px;
-    }
 
     .links {
         display: none;
@@ -166,6 +160,20 @@
     .hamburger {
         display: flex;
         z-index: 12;
+    }
+
+    .logo a span {
+        top: 17px;
+    }
+
+    .header nav {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        padding: 0 25px;
     }
 
     .logo a span {

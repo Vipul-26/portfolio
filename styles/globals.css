@@ -21,7 +21,6 @@ body {
   background-color: var(--secondary-color);
   color: var(--tertiary-color);
   line-height: 1.2;
-  font: Calibre,"San Francisco","SF Pro Text",-apple-system,system-ui,BlinkMacSystemFont,Roboto,"Helvetica Neue","Segoe UI",Arial,sans-serif;
 }
 
 a {
@@ -31,4 +30,26 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1023px) {
+
+  html,
+  body {
+    width: fit-content;
+  }
 }

@@ -23,8 +23,9 @@
   position: relative;
   right: 0;
   margin-left: auto;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  font-family: "Lucida Console";
   box-shadow: -10px 0px 30px -15px hsla(0, 0%, 57.3%, 0.2);
+  font-size: larger;
 }
 
 .nav {
@@ -42,7 +43,7 @@
 .nav ol li {
   margin: 0 auto 20px;
   position: relative;
-  font-size: var(--fs-lg);
+  font-size: 18px;
   counter-increment: item 1;
 }
 
@@ -50,7 +51,7 @@
   display: block;
   content: "0"counter(item) ".";
   color: var(--primary-color);
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 5px;
 }
 
@@ -72,7 +73,7 @@
   border: 2px solid var(--primary-color);
   border-radius: 3px;
   padding: 18px 50px;
-  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  font-family: "Lucida Console";
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
@@ -93,6 +94,7 @@
 @media (max-width: 767px) {
   .aside {
     padding: 0 25px 25px 25px;
+    font-size: initial;
   }
 }
 

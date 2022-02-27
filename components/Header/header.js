@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import styles from './header.module.css';
 import MobMenu from 'components/MobMenu';
 
@@ -74,7 +73,7 @@ class Header extends React.PureComponent {
     getHamburgerStyle = () => {
         const { isMenuOpen } = this.state;
         return (
-            <Helmet>
+            <>
                 <style>
                     {`
                         .${styles.hamburgerInner}{
@@ -97,7 +96,7 @@ class Header extends React.PureComponent {
                         }
                 `}
                 </style>
-            </Helmet>
+            </>
         );
     };
 
@@ -140,7 +139,7 @@ class Header extends React.PureComponent {
                                 </li>
                             ))}
                         </ol>
-                        <a href="/">
+                        <a href="/Vipul's Resume.pdf">
                             <div className={styles.resumeButton}>Resume</div>
                         </a>
                     </div>
