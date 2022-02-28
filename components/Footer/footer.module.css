@@ -37,7 +37,6 @@
     width: 100%;
     max-width: 270px;
     margin: 0 auto 10px;
-    display: none;
     padding: 0 30px;
 }
 
@@ -62,6 +61,11 @@
 
 .heart {
     color: red;
+}
+
+.email {
+    color: darkturquoise;
+    letter-spacing: 1px;
 }
 
 @media (max-width: 1023px) {

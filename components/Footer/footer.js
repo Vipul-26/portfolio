@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './footer.module.css';
 
 class Footer extends React.PureComponent {
+
     render() {
         const date = new Date();
         const socialList = [
@@ -43,6 +44,9 @@ class Footer extends React.PureComponent {
                             </li>
                         ))}
                     </ul>
+                </div>
+                <div className={styles.email}>
+                    <h3 className='py-1'>vipulsinghssm1@gmail.com</h3>
                 </div>
                 <div className={styles.content}>
                     <a href="/" aria-label="home">
