@@ -58,7 +58,7 @@ const Projects = () => {
             links: [
                 {
                     iconName: 'github',
-                    url: '',
+                    url: 'https://github.com/Vipul-26/Top-10-News-Redux',
                 },
                 {
                     iconName: 'external',
