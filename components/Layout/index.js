@@ -27,7 +27,6 @@ const Layout = ({children}) => {
                     <meta name="keywords" content="portfolio" />
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="https://vipulsingh.com" />
-                    <meta property="og:image" content={``} />
                     <meta name="robots" content="noindex, nofollow" />
                 </>
             </Head>
