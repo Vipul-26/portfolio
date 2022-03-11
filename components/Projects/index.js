@@ -15,7 +15,7 @@ const Projects = () => {
                 },
                 {
                     iconName: 'external',
-                    url: 'https://vipulsingh.com',
+                    url: 'https://portfolio-vipul-26.vercel.app/',
                 },
             ],
         },
