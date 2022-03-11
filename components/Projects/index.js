@@ -37,7 +37,7 @@ const Projects = () => {
                 },
                 {
                     iconName: 'external',
-                    url: '',
+                    url: 'https://qb6210.csb.app/',
                 },
             ],
         },

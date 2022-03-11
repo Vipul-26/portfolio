@@ -28,6 +28,31 @@ a {
   text-decoration: none;
 }
 
+.bounce:hover {
+  position: relative;
+  animation: bounce 0.5s normal linear;
+  animation-iteration-count: 1;
+  color: 000;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -0.2em;
+  }
+
+  70% {
+    top: -0.3em;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

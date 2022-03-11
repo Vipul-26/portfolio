@@ -38,7 +38,7 @@ class Header extends React.PureComponent {
 
     componentDidMount() {
         window.addEventListener('scroll', () => this.handleScroll());
-    }
+    };
 
     toggleMenu = () => {
         const { isMenuOpen } = this.state;

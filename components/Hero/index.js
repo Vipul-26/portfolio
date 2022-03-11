@@ -5,8 +5,12 @@ import styles from './hero.module.css';
 const Hero = () => {
   return (
     <section id="hero" className={styles.section}>
-      <h1 className={styles.overline}>Hi there, my name is</h1>
-      <h2 className={styles.title}>Vipul Singh.</h2>
+      <h1 className={styles.overline}>
+        Hi there, my name is
+      </h1>
+      <h2 className={styles.title}>
+        Vipul Singh.
+      </h2>
       <h3 className={classnames(styles.subtitle, 'mt-3')}>
         I write code for responsive websites.
       </h3>
