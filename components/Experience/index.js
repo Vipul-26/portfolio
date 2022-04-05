@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './experience.module.css';
+import Fade from 'react-reveal/Fade';
 
 const TabList = [
     {
@@ -7,19 +8,38 @@ const TabList = [
         title: 'Web Developer',
         url: 'https://www.tcs.com/',
         range: 'Sept 2k20 - Present',
-        html: `<ul>
-        <li>Worked on Micro Front End apps in NextJS, TailwindCSS and ContentStack from scratch.</li>
-        <li>Worked on different features, stories & enhancements in Bed Bath Beyond, Buy Buy Baby e-Commerce websites.</li>
-        <li>Worked on performance improvement of websites.</li>
-        <li>Worked on Migrating Bed Bath Beyond, Buy Buy Baby e-Commerce pages from Drupal to ContentStack.</li>
-        <li>Built several reusable components in React.</li>
-      </ul>`,
     },
 ];
 
+const list = [
+    'Worked on Micro Front End apps in NextJS, TailwindCSS and ContentStack from scratch.',
+    'Worked on different features, stories & enhancements in Bed Bath Beyond, Buy Buy Baby e-Commerce websites.',
+    'Worked on performance improvement of websites.',
+    'Worked on Migrating Bed Bath Beyond, Buy Buy Baby e-Commerce pages from Drupal to ContentStack.',
+    'Built several reusable components in React.'
+];
+
 const Experience = () => {
+
+    const [finalData, setFinal] = useState([]);
+    const [count, setCount] = useState(0);
+    let timer = useRef();
+
+    useEffect(() => {
+        timer.current = setInterval(() => setCount((prev) => prev + 1), 1000);
+    }, []);
+
+    useEffect(() => {
+        list.forEach((item, index) => {
+            index === count - 1 && setFinal([...finalData, <li key={index}>{item}</li>]);
+        });
+        if (count > list.length) {
+            clearInterval(timer.current);
+        }
+    }, [count]);
+
     const [selectedTab, selectTab] = useState(1);
-    const { title, company, url, range, html } = TabList[selectedTab - 1];
+    const { title, company, url, range } = TabList[selectedTab - 1];
 
     return (
         <section
@@ -27,9 +47,11 @@ const Experience = () => {
             style={{ position: 'relative', maxWidth: '750px' }}
             className={styles.section}
         >
-            <h3 className={styles.heading}>
-                Where I've Worked
-            </h3>
+            <Fade right>
+                <h3 className={`${styles.heading}`}>
+                    Where I've Worked
+                </h3>
+            </Fade>
             <div className={styles.jobTabs}>
                 <ul className={styles.tablist}>
                     {TabList.map((tab, i) => (
@@ -64,7 +86,13 @@ const Experience = () => {
                         <h5 className={styles.jobDetail}>
                             <span>{range}</span>
                         </h5>
-                        <div dangerouslySetInnerHTML={{ __html: html }} />
+                        <div>
+                            <ul>
+                                {finalData.map((item) => (
+                                    <>{item}</>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './projects.module.css';
+import Fade from 'react-reveal/Fade';
 
 const Projects = () => {
     const List = [
@@ -77,9 +78,11 @@ const Projects = () => {
             className={styles.section}
         >
             <div className={styles.Project}>
-                <h3 className={styles.heading}>
-                    Noteworthy Projects
-                </h3>
+                <Fade left>
+                    <h3 className={`${styles.heading}`}>
+                        Noteworthy Projects
+                    </h3>
+                </Fade>
                 <div className={styles.grid}>
                     <div className={styles.projects}>
                         {List.slice(0, sliceValue).map(

@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import Header from '../Header/header';
 import Footer from '../Footer/footer';
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
     return (
         <div id="layout" >
             <Head>
@@ -15,6 +15,10 @@ const Layout = ({children}) => {
                     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
                     type="text/css"
                     rel="stylesheet"
+                />
+                <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 />
                 <link rel="shortcut icon" href="/favicon.png" />
                 <meta
