@@ -26,7 +26,7 @@ const Experience = () => {
     let timer = useRef();
 
     useEffect(() => {
-        timer.current = setInterval(() => setCount((prev) => prev + 1), 1000);
+        timer.current = setInterval(() => setCount((prev) => prev + 1), 2000);
     }, []);
 
     useEffect(() => {
