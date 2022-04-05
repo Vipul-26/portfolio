@@ -12,11 +12,11 @@ const TabList = [
 ];
 
 const list = [
-    'Worked on Micro Front End apps in NextJS, TailwindCSS and ContentStack from scratch.',
-    'Worked on different features, stories & enhancements in Bed Bath Beyond, Buy Buy Baby e-Commerce websites.',
-    'Worked on performance improvement of websites.',
-    'Worked on Migrating Bed Bath Beyond, Buy Buy Baby e-Commerce pages from Drupal to ContentStack.',
-    'Built several reusable components in React.'
+    "Worked on Micro Front End apps in NextJS, TailwindCSS and ContentStack from scratch.",
+    "Worked on different features, stories & enhancements for a US based client's retail e-Commerce websites.",
+    "Worked on performance improvement of websites.",
+    "Worked on Migrating the same retail websites from Drupal to ContentStack.",
+    "Built several reusable components in React."
 ];
 
 const Experience = () => {
