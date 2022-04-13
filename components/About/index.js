@@ -38,7 +38,7 @@ const About = () => {
               >
                 TCST, Bhopal
               </a>
-              , I started my career as a web developer and today, after 1.5+ years,
+              , I started my career as a web developer and today, after 1.8+ years,
               as a front-end developer, I worked on a wide variety of web apps.
             </p>
             <p>
