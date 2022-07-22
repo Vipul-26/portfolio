@@ -4,42 +4,42 @@ import Fade from 'react-reveal/Fade';
 
 const TabList = [
     {
+        company: 'AMDOCS',
+        title: 'Software Developer',
+        url: 'https://www.amdocs.com/',
+        range: 'July 2k20 - Present',
+    },
+    {
         company: 'Tata Consultancy Services',
         title: 'Web Developer',
         url: 'https://www.tcs.com/',
-        range: 'Sept 2k20 - Present',
+        range: 'Sept 2k20 - July 2k20',
     },
 ];
 
 const list = [
-    "Worked on Micro Front End apps in NextJS, TailwindCSS and ContentStack from scratch.",
-    "Worked on different features, stories & enhancements for a US based client's retail e-Commerce websites.",
-    "Worked on performance improvement of websites.",
-    "Worked on Migrating the same retail websites from Drupal to ContentStack.",
-    "Built several reusable components in React."
+    [
+        "Working as a Front End Developer."
+    ],
+    [
+        "Worked on Micro Front End apps in NextJS, TailwindCSS and ContentStack from scratch.",
+        "Worked on different features, stories & enhancements for a US based client's retail e-Commerce websites.",
+        "Worked on performance improvement of websites.",
+        "Worked on Migrating the same retail websites from Drupal to ContentStack.",
+        "Built several reusable components in React."
+    ]
 ];
 
 const Experience = () => {
 
     const [finalData, setFinal] = useState([]);
-    const [count, setCount] = useState(0);
-    let timer = useRef();
-
-    useEffect(() => {
-        timer.current = setInterval(() => setCount((prev) => prev + 1), 2000);
-    }, []);
-
-    useEffect(() => {
-        list.forEach((item, index) => {
-            index === count - 1 && setFinal([...finalData, <li key={index}>{item}</li>]);
-        });
-        if (count > list.length) {
-            clearInterval(timer.current);
-        }
-    }, [count]);
-
     const [selectedTab, selectTab] = useState(1);
     const { title, company, url, range } = TabList[selectedTab - 1];
+
+    useEffect(() => {
+        const selectedList = selectedTab === 1 ? list[0] : list[1];
+        setFinal(selectedList);
+    }, [selectedTab]);
 
     return (
         <section
@@ -60,7 +60,7 @@ const Experience = () => {
                                 onClick={() => selectTab(i + 1)}
                                 type="button"
                                 className={
-                                    selectedTab === i + 1 ? styles.buttonActive : undefined
+                                    selectedTab === i + 1 ? styles.buttonActive : ''
                                 }
                             >
                                 {tab.company}
@@ -89,7 +89,7 @@ const Experience = () => {
                         <div>
                             <ul>
                                 {finalData.map((item) => (
-                                    <>{item}</>
+                                    <li>{item}</li>
                                 ))}
                             </ul>
                         </div>

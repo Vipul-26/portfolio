@@ -38,17 +38,17 @@ const About = () => {
               >
                 TCST, Bhopal
               </a>
-              , I started my career as a web developer and today, after 1.8+ years,
+              , I started my career as a web developer and today, after 2+ years,
               as a front-end developer, I worked on a wide variety of web apps.
             </p>
             <p>
               Currently, I&lsquo;m working with
               <a
-                href="https://www.tcs.com/"
+                href="https://www.amdocs.com/"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
               >
-                Tata Consultancy Services
+                AMDOCS
               </a>
               .
             </p>
