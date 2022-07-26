@@ -7,13 +7,13 @@ const TabList = [
         company: 'AMDOCS',
         title: 'Software Developer',
         url: 'https://www.amdocs.com/',
-        range: 'July 2k20 - Present',
+        range: 'July 2k22 - Present',
     },
     {
         company: 'Tata Consultancy Services',
         title: 'Web Developer',
         url: 'https://www.tcs.com/',
-        range: 'Sept 2k20 - July 2k20',
+        range: 'Sept 2k20 - July 2k22',
     },
 ];
 
