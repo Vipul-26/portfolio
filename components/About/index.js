@@ -7,12 +7,14 @@ import Zoom from 'react-reveal/Zoom';
 const About = () => {
   const skills = [
     'JavaScript',
-    'React, Redux',
+    'React',
+    'Redux',
+    'Redux-Saga',
     'NextJS',
-    'TailwindCSS',
-    'Bootstrap',
     'Html5',
     'Css3',
+    'Bootstrap',
+    'TailwindCSS',
     'Content Stack',
   ];
   return (

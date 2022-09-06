@@ -110,6 +110,7 @@
 .Project .projectDescription {
     font-size: 16px;
     color: var(--tertiaryLight-color);
+    line-height: 1.3rem;
 }
 
 .Project .techList {

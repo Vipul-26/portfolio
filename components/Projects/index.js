@@ -6,9 +6,15 @@ const Projects = () => {
     const List = [
         {
             name: 'Portfolio',
-            description:
-                'My portfolio website which shows about me, my experience, work and projects.',
-            tech: ['next js', 'tailwindcss', 'javascript', 'css3', 'seo-friendly', 'ssr'],
+            description: 'My portfolio website which shows about me, my experience, work and projects.',
+            tech: [
+                'next-js',
+                'tailwindcss',
+                'javascript',
+                'css3',
+                'seo-friendly',
+                'animate.css'
+            ],
             links: [
                 {
                     iconName: 'github',
@@ -21,36 +27,14 @@ const Projects = () => {
             ],
         },
         {
-            name: 'Online Written Ability Test',
-            description: 'An online written ability test react app with more than 10 sets & choice of time limit.',
-            tech: [
-                'react',
-                'react-bootstrap',
-                'react-router-dom',
-                'javascript',
-                'css3',
-                'seo-friendly',
-            ],
-            links: [
-                {
-                    iconName: 'github',
-                    url: 'https://github.com/Vipul-26/Written-Ability-Test',
-                },
-                {
-                    iconName: 'external',
-                    url: 'https://qb6210.csb.app/',
-                },
-            ],
-        },
-        {
             name: 'Checkbox Data Filter',
-            description: 'A sample product listing page with filter functionality.',
+            description: 'A sample product listing page with filter functionality like flipkart.',
             tech: [
                 'react',
                 'react-dom',
                 'axios',
                 'bootstrap',
-                'client-side-rendering',
+                'react-outside-click-handler',
                 'seo-friendly',
                 'css3',
                 'javascript',
@@ -63,7 +47,74 @@ const Projects = () => {
                 },
                 {
                     iconName: 'external',
-                    url: 'https://2kq0qg.csb.app/',
+                    url: 'https://checkbox-data-filter.vercel.app/',
+                },
+            ],
+        },
+        {
+            name: 'My Blog',
+            description: 'A Blog website created using next-js & next-js api.',
+            tech: [
+                'react',
+                'axios',
+                'tailwindcss',
+                'nextjs-progressbar',
+                'react-markdown',
+                'react-mailchimp-subscribe',
+            ],
+            links: [
+                {
+                    iconName: 'github',
+                    url: 'https://github.com/Vipul-26/My-Blog',
+                },
+                {
+                    iconName: 'external',
+                    url: 'https://blog-vipul-26.vercel.app/',
+                },
+            ],
+        },
+        {
+            name: 'Online Written Ability Test',
+            description: 'An online written ability test react app with more than 10 sets & choice of time limit.',
+            tech: [
+                'react',
+                'react-bootstrap',
+                'react-router-dom',
+                'javascript',
+                'css3',
+                'react-avatar',
+            ],
+            links: [
+                {
+                    iconName: 'github',
+                    url: 'https://github.com/Vipul-26/Written-Ability-Test',
+                },
+                {
+                    iconName: 'external',
+                    url: 'https://qb6210.csb.app/',
+                },
+            ],
+        }, ,
+        {
+            name: 'Excel Import-Export',
+            description: 'A sample excel import-export page.',
+            tech: [
+                'react',
+                'axios',
+                'react-bootstrap',
+                'react-csv',
+                'read-excel-file',
+                'file-saver',
+                'xlsx',
+            ],
+            links: [
+                {
+                    iconName: 'github',
+                    url: 'https://github.com/Vipul-26/Import-Export-Example',
+                },
+                {
+                    iconName: 'external',
+                    url: 'https://import-export-example.vercel.app/',
                 },
             ],
         },

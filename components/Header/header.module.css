@@ -35,7 +35,7 @@
 
 .logo a span {
     position: absolute;
-    top: 28px;
+    top: 30px;
     left: 15px;
     font-size: 20px;
 }
@@ -166,7 +166,7 @@
     }
 
     .logo a span {
-        top: 17px;
+        top: 16px;
     }
 
     .header nav {
