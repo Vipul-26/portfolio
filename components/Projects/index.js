@@ -74,6 +74,30 @@ const Projects = () => {
             ],
         },
         {
+            name: 'Sample Blog',
+            description: 'A sample blog page using react, redux & firebase.',
+            tech: [
+                'react',
+                'react-redux',
+                'redux-thunk',
+                'firebase',
+                'react-redux-firebase',
+                'redux-firestore',
+                'moment',
+                'materialise-css',
+            ],
+            links: [
+                {
+                    iconName: 'github',
+                    url: 'https://github.com/Vipul-26/sample-blog',
+                },
+                {
+                    iconName: 'external',
+                    url: 'https://sample-blog-36a85.web.app/',
+                },
+            ],
+        },
+        {
             name: 'Online Written Ability Test',
             description: 'An online written ability test react app with more than 10 sets & choice of time limit.',
             tech: [
@@ -119,7 +143,7 @@ const Projects = () => {
             ],
         },
     ];
-    const preSetVal = List.length > 6 ? 6 : List.length;
+    const preSetVal = List.length > 6 ? 7 : List.length;
     const [count, toggleShow] = useState(preSetVal);
     const sliceValue = count === preSetVal ? preSetVal : List.length;
     return (
