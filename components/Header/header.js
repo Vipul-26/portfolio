@@ -139,7 +139,7 @@ class Header extends React.PureComponent {
                                 </li>
                             ))}
                         </ol>
-                        <a href="/Vipul's Resume.pdf">
+                        <a href="/VipulResume.pdf">
                             <div className={styles.resumeButton}>Resume</div>
                         </a>
                     </div>
