@@ -21,13 +21,14 @@ const Layout = ({ children }) => {
                     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 />
                 <link rel="shortcut icon" href="/favicon.png" />
+                <link rel="canonical" href="https://portfolio-oj3q6iyb6-vipul-26.vercel.app/" />
                 <meta
                     name="viewport"
                     content="width=device-width,initial-scale=1.0"
                 />
-                <meta name="description" content="A portfolio website created using next-js & tailwindcss." />
+                <meta name="description" content="This is a portfolio website bootstraped with create-next-app using tailwindcss & animate.css." />
                 <meta name="author" content="Vipul Singh" />
-                <meta name="keywords" content="portfolio" />
+                <meta name="keywords" content="portfolio, vipul singh portfolio, vipul resume, vipul portfolio" />
                 <meta name="theme-color" content="#0a192f" />
                 <meta property="og:title" content="Vipul's Resume" />
                 <meta property="og:description" content="This is a portfolio website" />
