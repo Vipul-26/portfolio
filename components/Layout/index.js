@@ -14,13 +14,11 @@ const Layout = ({ children }) => {
                 <link
                     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
                     type="text/css"
-                    rel="preload"
-                    as="style"
+                    rel="prefetch"
                 />
                 <link
-                    rel="preload"
+                    rel="prefetch"
                     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-                    as="style"
                 />
                 <link rel="shortcut icon" href="/favicon.png" />
                 <link rel="canonical" href="https://portfolio-oj3q6iyb6-vipul-26.vercel.app/" />
