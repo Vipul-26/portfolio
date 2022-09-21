@@ -49,9 +49,9 @@ const Hero = () => {
       <div className={styles.container}>
         <span id='text'></span>
       </div>
-      <h3 className={classnames(styles.subtitle, 'mt-3')}>
+      <h2 className={classnames(styles.subtitle, 'mt-3')}>
         I write code for responsive websites.
-      </h3>
+      </h2>
       <div className={classnames(styles.description, 'mt-6')}>
         <p>
           I&lsquo;m a Front-End  developer based in Sasaram, India,

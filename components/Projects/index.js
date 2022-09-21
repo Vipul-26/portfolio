@@ -74,6 +74,28 @@ const Projects = () => {
             ],
         },
         {
+            name: 'Online Written Ability Test',
+            description: 'An online written ability test react app with more than 10 sets & choice of time limit.',
+            tech: [
+                'react',
+                'react-bootstrap',
+                'react-router-dom',
+                'javascript',
+                'css3',
+                'react-avatar',
+            ],
+            links: [
+                {
+                    iconName: 'github',
+                    url: 'https://github.com/Vipul-26/Written-Ability-Test',
+                },
+                {
+                    iconName: 'external',
+                    url: 'https://qb6210.csb.app/',
+                },
+            ],
+        },
+        {
             name: 'Sample Blog',
             description: 'A sample blog page using react, redux & firebase.',
             tech: [
@@ -97,28 +119,6 @@ const Projects = () => {
                 },
             ],
         },
-        {
-            name: 'Online Written Ability Test',
-            description: 'An online written ability test react app with more than 10 sets & choice of time limit.',
-            tech: [
-                'react',
-                'react-bootstrap',
-                'react-router-dom',
-                'javascript',
-                'css3',
-                'react-avatar',
-            ],
-            links: [
-                {
-                    iconName: 'github',
-                    url: 'https://github.com/Vipul-26/Written-Ability-Test',
-                },
-                {
-                    iconName: 'external',
-                    url: 'https://qb6210.csb.app/',
-                },
-            ],
-        }, ,
         {
             name: 'Excel Import-Export',
             description: 'A sample excel import-export page.',
@@ -166,7 +166,7 @@ const Projects = () => {
                                     <div className={styles.projectInner}>
                                         <div className={styles.projectHeader}>
                                             <div className={styles.folder}>
-                                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 60 60">
+                                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 60 60" alt="folder">
                                                     <title>Folder</title>
                                                     <path
                                                         d="M57.49,21.5H54v-6.268c0-1.507-1.226-2.732-2.732-2.732H26.515l-5-7H2.732C1.226,5.5,0,6.726,0,8.232v43.687l0.006,0
@@ -193,6 +193,7 @@ const Projects = () => {
                                                                 xmlns="http://www.w3.org/2000/svg"
                                                                 role="img"
                                                                 viewBox="0 0 438.549 438.549"
+                                                                alt="github"
                                                             >
                                                                 <title>GitHub</title>
                                                                 <path
@@ -223,6 +224,7 @@ const Projects = () => {
                                                                 xmlns="http://www.w3.org/2000/svg"
                                                                 role="img"
                                                                 viewBox="0 0 194.818 194.818"
+                                                                alt="external"
                                                             >
                                                                 <title>External</title>
                                                                 <g>
@@ -242,7 +244,7 @@ const Projects = () => {
                                                 ))}
                                             </div>
                                         </div>
-                                        <h5 className={styles.projectName}>{name}</h5>
+                                        <h4 className={styles.projectName}>{name}</h4>
                                         <div className={styles.projectDescription}>
                                             {description}
                                         </div>

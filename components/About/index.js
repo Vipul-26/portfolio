@@ -73,12 +73,13 @@ const About = () => {
         </Fade>
         <Fade right>
           <div className={styles.aboutPic}>
-            <a to="/" aria-label="Display Picture">
+            <a to="/">
               <Image
                 src="/Vipul.jpg"
                 alt="Vipul Kumar Singh"
                 width={300}
                 height={300}
+                title="Vipul Kumar Singh"
               />
             </a>
           </div>

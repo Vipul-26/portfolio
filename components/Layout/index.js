@@ -25,14 +25,14 @@ const Layout = ({ children }) => {
                     name="viewport"
                     content="width=device-width,initial-scale=1.0"
                 />
-                <>
-                    <meta property="og:title" content="Vipul's Resume" />
-                    <meta property="og:description" content="This is a portfolio" />
-                    <meta name="keywords" content="portfolio" />
-                    <meta property="og:type" content="website" />
-                    <meta property="og:url" content="https://vipulsingh.com" />
-                    <meta name="robots" content="noindex, nofollow" />
-                </>
+                <meta name="description" content="A portfolio website created using nextjs & tailwindcss." />
+                <meta name="author" content="Vipul Singh" />
+                <meta property="og:title" content="Vipul's Resume" />
+                <meta property="og:description" content="This is a portfolio website" />
+                <meta name="keywords" content="portfolio" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://portfolio-vipul-26.vercel.app/" />
+                <meta name="robots" content="noindex, nofollow" />
             </Head>
             <Header />
             <main className={classnames('overflow-x-hidden')}>
