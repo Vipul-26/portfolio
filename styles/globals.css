@@ -32,7 +32,6 @@ a {
   position: relative;
   animation: bounce 0.5s normal linear;
   animation-iteration-count: 1;
-  color: 000;
 }
 
 @keyframes bounce {
