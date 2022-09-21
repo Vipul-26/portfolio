@@ -62,7 +62,7 @@ const Hero = () => {
       <div>
         <a
           className={classnames(styles.getIntouch, 'mt-6')}
-          href="mailto:vipulsinghssm1@gmail.com?subject=Get In Touch&body=Hello Vipul,"
+          href="mailto:vipulsinghssm1@gmail.com?subject=Get%20In%20Touch&body=Hello%20Vipul,"
         >
           Get In Touch
         </a>

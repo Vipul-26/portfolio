@@ -27,7 +27,7 @@ const Contact = () => {
                 <Fade bottom>
                     <div>
                         <a
-                            href="mailto:vipulsinghssm1@gmail.com?subject=Get In Touch&body=Hello Vipul,"
+                            href="mailto:vipulsinghssm1@gmail.com?subject=Get%20In%20Touch&body=Hello%20Vipul,"
                             className={`${styles.bigButton} ${styles.sayHello}`}
                         >
                             Say Hello
