@@ -166,7 +166,7 @@ const Projects = () => {
                                     <div className={styles.projectInner}>
                                         <div className={styles.projectHeader}>
                                             <div className={styles.folder}>
-                                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 60 60" alt="folder">
+                                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 60 60">
                                                     <title>Folder</title>
                                                     <path
                                                         d="M57.49,21.5H54v-6.268c0-1.507-1.226-2.732-2.732-2.732H26.515l-5-7H2.732C1.226,5.5,0,6.726,0,8.232v43.687l0.006,0
@@ -193,7 +193,6 @@ const Projects = () => {
                                                                 xmlns="http://www.w3.org/2000/svg"
                                                                 role="img"
                                                                 viewBox="0 0 438.549 438.549"
-                                                                alt="github"
                                                             >
                                                                 <title>GitHub</title>
                                                                 <path
@@ -224,7 +223,6 @@ const Projects = () => {
                                                                 xmlns="http://www.w3.org/2000/svg"
                                                                 role="img"
                                                                 viewBox="0 0 194.818 194.818"
-                                                                alt="external"
                                                             >
                                                                 <title>External</title>
                                                                 <g>
