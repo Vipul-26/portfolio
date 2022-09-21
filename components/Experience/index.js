@@ -55,7 +55,7 @@ const Experience = () => {
             <div className={styles.jobTabs}>
                 <ul className={styles.tablist}>
                     {TabList.map((tab, i) => (
-                        <li>
+                        <li key={i}>
                             <button
                                 onClick={() => selectTab(i + 1)}
                                 type="button"
@@ -89,7 +89,9 @@ const Experience = () => {
                         <div>
                             <ul>
                                 {finalData.map((item) => (
-                                    <li>{item}</li>
+                                    <li key={item}>
+                                        {item}
+                                    </li>
                                 ))}
                             </ul>
                         </div>

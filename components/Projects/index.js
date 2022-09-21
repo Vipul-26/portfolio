@@ -162,7 +162,7 @@ const Projects = () => {
                     <div className={styles.projects}>
                         {List.slice(0, sliceValue).map(
                             ({ name, description, tech, links }) => (
-                                <div className={styles.project}>
+                                <div className={styles.project} key={name}>
                                     <div className={styles.projectInner}>
                                         <div className={styles.projectHeader}>
                                             <div className={styles.folder}>
