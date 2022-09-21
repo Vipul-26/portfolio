@@ -149,7 +149,6 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            style={{ flexDirection: 'column', alignItems: 'flex-start' }}
             className={styles.section}
         >
             <div className={styles.Project}>

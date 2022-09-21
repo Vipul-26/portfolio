@@ -44,7 +44,6 @@ const Experience = () => {
     return (
         <section
             id="experience"
-            style={{ position: 'relative', maxWidth: '750px' }}
             className={styles.section}
         >
             <Fade right>

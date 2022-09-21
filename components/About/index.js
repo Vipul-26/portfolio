@@ -18,7 +18,7 @@ const About = () => {
     'Content Stack',
   ];
   return (
-    <section id="about" style={{ position: 'relative' }} className={styles.section}>
+    <section id="about" className={styles.section}>
       <Zoom>
         <h3 className={`${styles.heading}`}>
           About Me

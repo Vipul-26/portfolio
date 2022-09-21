@@ -39,6 +39,7 @@ const Layout = ({ children }) => {
                 <meta property="og:description" content="This is a portfolio website" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://portfolio-vipul-26.vercel.app/" />
+                <meta property="og:image" content="https://portfolio-vipul-26.vercel.app/_next/image?url=%2FVipul.jpg&w=384&q=75" />
                 <meta name="twitter:image" content="https://portfolio-vipul-26.vercel.app/_next/image?url=%2FVipul.jpg&w=384&q=75" />
                 <meta name="robots" content="index, follow" />
             </Head>
