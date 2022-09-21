@@ -21,8 +21,12 @@ const Layout = ({ children }) => {
                     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 />
                 <link rel="shortcut icon" href="/favicon.png" />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="/favicon.png"
+                />
                 <link rel="canonical" href="https://portfolio-oj3q6iyb6-vipul-26.vercel.app/" />
-                <meta http-equiv="Content-Security-Policy" content="script-src 'none'" />
                 <meta
                     name="viewport"
                     content="width=device-width,initial-scale=1.0"
