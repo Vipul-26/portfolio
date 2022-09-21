@@ -73,7 +73,7 @@ class Header extends React.PureComponent {
     getHamburgerStyle = () => {
         const { isMenuOpen } = this.state;
         return (
-            <>
+            <div>
                 <style>
                     {`
                         .${styles.hamburgerInner}{
@@ -96,7 +96,7 @@ class Header extends React.PureComponent {
                         }
                 `}
                 </style>
-            </>
+            </div>
         );
     };
 
