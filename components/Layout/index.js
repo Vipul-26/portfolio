@@ -32,7 +32,6 @@ const Layout = ({ children }) => {
                 <meta name="keywords" content="portfolio" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://portfolio-vipul-26.vercel.app/" />
-                <meta name="robots" content="noindex, nofollow" />
             </Head>
             <Header />
             <main className={classnames('overflow-x-hidden')}>

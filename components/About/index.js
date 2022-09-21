@@ -63,17 +63,17 @@ const About = () => {
               ))}
             </ul>
             <p className="mt-2">
-              Click
+              Download my
               <a href="/Vipul's Resume.pdf" download="VipulResume">
-                here
+                resume
               </a>
-              to download my resume.
+              from here.
             </p>
           </div>
         </Fade>
         <Fade right>
           <div className={styles.aboutPic}>
-            <a to="/">
+            <a href='/'>
               <Image
                 src="/Vipul.jpg"
                 alt="Vipul Kumar Singh"
