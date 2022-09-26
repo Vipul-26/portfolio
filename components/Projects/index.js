@@ -91,7 +91,7 @@ const Projects = () => {
                 },
                 {
                     iconName: 'external',
-                    url: 'https://qb6210.csb.app/',
+                    url: 'https://written-ability-test.vercel.app/',
                 },
             ],
         },
