@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './experience.module.css';
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
 
 const TabList = [
     {
@@ -46,11 +46,11 @@ const Experience = () => {
             id="experience"
             className={styles.section}
         >
-            <Fade right>
+            {/* <Fade right> */}
                 <h3 className={`${styles.heading}`}>
                     Where I've Worked
                 </h3>
-            </Fade>
+            {/* </Fade> */}
             <div className={styles.jobTabs}>
                 <ul className={styles.tablist}>
                     {TabList.map((tab, i) => (
