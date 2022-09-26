@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
                 <meta property="og:url" content="https://portfolio-vipul-26.vercel.app/" />
                 <meta property="og:image" content="https://portfolio-vipul-26.vercel.app/_next/image?url=%2FVipul.jpg&w=384&q=75" />
                 <meta name="twitter:image" content="https://portfolio-vipul-26.vercel.app/_next/image?url=%2FVipul.jpg&w=384&q=75" />
-                <meta name="robots" content="index, follow" />
+                {/* <meta name="robots" content="index, follow" /> */}
             </Head>
             <Header />
             <main className={classnames('overflow-x-hidden')}>
