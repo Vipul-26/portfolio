@@ -74,6 +74,7 @@ const About = () => {
         <Fade right>
           <div className={styles.aboutPic}>
             <Image
+              className={styles.aboutPicImage}
               src="/Vipul.jpg"
               alt="Vipul Kumar Singh"
               width={300}
