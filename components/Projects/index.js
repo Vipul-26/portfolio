@@ -6,7 +6,7 @@ const Projects = () => {
     const List = [
         {
             name: 'Portfolio',
-            description: 'My portfolio website which shows about me, my experience, works and projects.',
+            description: 'My portfolio website which shows me, my experience, works, and projects.',
             tech: [
                 'next-js',
                 'tailwindcss',
@@ -28,7 +28,7 @@ const Projects = () => {
         },
         {
             name: 'Checkbox Data Filter',
-            description: 'A sample product listing page with filter functionality like flipkart.',
+            description: 'A sample product listing page with filter functionality like Flipkart.',
             tech: [
                 'react',
                 'axios',
@@ -74,7 +74,7 @@ const Projects = () => {
         },
         {
             name: 'Online Written Ability Test',
-            description: 'An online written ability test react app with more than 10 sets & choice of time limit.',
+            description: 'An online written ability test react app with more than 10 sets & choice of a time limit.',
             tech: [
                 'react',
                 'react-bootstrap',
