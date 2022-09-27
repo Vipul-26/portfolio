@@ -19,9 +19,8 @@ const Contact = () => {
                 </Fade>
                 <Fade right>
                     <p className={styles.para}>
-                        Although I&lsquo;m not currently looking for freelance opportunities,
-                        my inbox is always open. Whether for a potential project or just to
-                        say hi, I&lsquo;ll try my best to answer your email!
+                        Though I&lsquo;m not presently searching for freelance opportunities,
+                        my inbox is usually open. Whether or not for a possible project or simply to mention hi, I&lsquo;ll strive my best to answer your email!
                     </p>
                 </Fade>
                 <Fade bottom>
