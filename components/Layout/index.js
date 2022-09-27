@@ -27,6 +27,7 @@ const Layout = ({ children }) => {
                     href="/favicon.png"
                 />
                 <link rel="canonical" href="https://portfolio-vipul-26.vercel.app/" />
+                <meta name="google-site-verification" content="I2pXOuorfYJ07tKwD4rpvkSEx5UKuBWDmR9Jt3za1XM" />
                 <meta
                     name="viewport"
                     content="width=device-width,initial-scale=1.0"
