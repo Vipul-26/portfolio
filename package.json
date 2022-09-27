@@ -30,6 +30,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.17.2",
+    "@next/env": "^12.3.1",
     "@svgr/webpack": "^6.2.1",
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.2.5",
