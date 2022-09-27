@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.vipulsingh.in.net/" />
                 <meta property="og:image" content="https://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
-                <meta name="twitter:card" content="Portfolio website of Vipul Singh" />
+                <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:description" content="My portfolio website created using tailwindcss & animate.css." />
                 <meta name="twitter:title" content="Vipul Singh Portfolio" />
                 <meta name="twitter:image" content="https://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
