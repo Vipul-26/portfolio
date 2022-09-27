@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
                 <meta name="twitter:description" content="My portfolio website created using tailwindcss & animate.css." />
                 <meta name="twitter:title" content="Vipul Singh Portfolio" />
                 <meta name="twitter:image" content="https://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
-                <meta name="twitter:site" content="https://www.vipulsingh.in.net/" />
+                <meta name="twitter:site" content="@VipulSi78066437" />
                 <meta name="robots" content="index, follow" />
             </Head>
             <Header />
