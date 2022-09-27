@@ -39,9 +39,9 @@ const Layout = ({ children }) => {
                 <meta property="og:title" content="Vipul's Resume" />
                 <meta property="og:description" content="This is a portfolio website" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="http://www.vipulsingh.in.net/" />
-                <meta property="og:image" content="http://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
-                <meta name="twitter:image" content="http://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
+                <meta property="og:url" content="https://www.vipulsingh.in.net/" />
+                <meta property="og:image" content="https://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
+                <meta name="twitter:image" content="https://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
                 <meta name="robots" content="index, follow" />
             </Head>
             <Header />

@@ -22,7 +22,7 @@ const Projects = () => {
                 },
                 {
                     iconName: 'external',
-                    url: 'http://www.vipulsingh.in.net/',
+                    url: 'https://www.vipulsingh.in.net/',
                 },
             ],
         },
