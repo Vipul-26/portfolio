@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
                     type="text/css"
                     rel="prefetch"
                 />
+                <link href="http://fonts.cdnfonts.com/css/lucida-console" rel="prefetch" />
                 <link
                     rel="prefetch"
                     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
