@@ -13,7 +13,7 @@
     color: var(--tertiaryLight-color);
     width: 100%;
     margin: 13px 0;
-    font-family: "Lucida Console";
+    font-family: "Lucida Console", "Courier New", monospace;
     font-size: 15px;
     line-height: 1;
 }

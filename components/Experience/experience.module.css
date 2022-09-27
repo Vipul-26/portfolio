@@ -22,7 +22,7 @@
     border-left: 3px solid var(--tertiary-color);
     text-align: left;
     white-space: nowrap;
-    font-family: "Lucida Console";
+    font-family: "Lucida Console", "Courier New", monospace;
     font-size: 15px;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .jobDetail {
-    font-family: "Lucida Console";
+    font-family: "Lucida Console", "Courier New", monospace;
     font-size: 15px;
     font-weight: normal;
     letter-spacing: 0.5px;
@@ -144,7 +144,7 @@
 .heading:before {
     content: "02"".";
     margin-right: 10px;
-    font-family: "Lucida Console";
+    font-family: "Lucida Console", "Courier New", monospace;
     font-weight: normal;
     color: var(--primary-color);
     font-size: 20px;
