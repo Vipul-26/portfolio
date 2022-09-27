@@ -14,7 +14,7 @@
 
 .Project .view {
     display: inline-block;
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Lucida Console", sans-serif;
     font-size: 15px;
     margin: 0 auto;
 }
@@ -122,7 +122,7 @@
 }
 
 .Project .techList li {
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Lucida Console", sans-serif;
     font-size: 15px;
     color: var(--tertiary-color);
     line-height: 1.75;
@@ -151,7 +151,7 @@
 .heading:before {
     content: "03"".";
     margin-right: 10px;
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Lucida Console", sans-serif;
     font-weight: normal;
     color: var(--primary-color);
     font-size: 20px;

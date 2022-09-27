@@ -18,7 +18,7 @@
     margin-left: auto;
     margin-right: auto;
     color: var(--tertiaryLight-color);
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Lucida Console", sans-serif;
     counter-reset: item 0;
     z-index: 12;
     display: flex;
@@ -89,7 +89,7 @@
     border: 2px solid var(--primary-color);
     border-radius: 3px;
     padding: 0.75rem 1rem;
-    font-family: "Lucida Console", "Courier New", monospace;
+    font-family: "Lucida Console", sans-serif;
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
