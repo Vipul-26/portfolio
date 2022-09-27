@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
                     sizes="180x180"
                     href="/favicon.png"
                 />
-                <link rel="canonical" href="https://portfolio-oj3q6iyb6-vipul-26.vercel.app/" />
+                <link rel="canonical" href="https://portfolio-vipul-26.vercel.app/" />
                 <meta
                     name="viewport"
                     content="width=device-width,initial-scale=1.0"
@@ -38,10 +38,10 @@ const Layout = ({ children }) => {
                 <meta property="og:title" content="Vipul's Resume" />
                 <meta property="og:description" content="This is a portfolio website" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://portfolio-vipul-26.vercel.app/" />
-                <meta property="og:image" content="https://portfolio-vipul-26.vercel.app/_next/image?url=%2FVipul.jpg&w=384&q=75" />
-                <meta name="twitter:image" content="https://portfolio-vipul-26.vercel.app/_next/image?url=%2FVipul.jpg&w=384&q=75" />
-                {/* <meta name="robots" content="index, follow" /> */}
+                <meta property="og:url" content="http://www.vipulsingh.in.net/" />
+                <meta property="og:image" content="http://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
+                <meta name="twitter:image" content="http://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
+                <meta name="robots" content="index, follow" />
             </Head>
             <Header />
             <main className={classnames('overflow-x-hidden')}>

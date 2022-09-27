@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import styles from './projects.module.css';
-// import Fade from 'react-reveal/Fade';
+import Fade from 'react-reveal/Fade';
 
 const Projects = () => {
     const List = [
         {
             name: 'Portfolio',
-            description: 'My portfolio website which shows about me, my experience, work and projects.',
+            description: 'My portfolio website which shows about me, my experience, works and projects.',
             tech: [
                 'next-js',
                 'tailwindcss',
@@ -22,7 +22,7 @@ const Projects = () => {
                 },
                 {
                     iconName: 'external',
-                    url: 'https://portfolio-vipul-26.vercel.app/',
+                    url: 'http://www.vipulsingh.in.net/',
                 },
             ],
         },
@@ -31,7 +31,6 @@ const Projects = () => {
             description: 'A sample product listing page with filter functionality like flipkart.',
             tech: [
                 'react',
-                'react-dom',
                 'axios',
                 'bootstrap',
                 'react-outside-click-handler',
@@ -152,11 +151,11 @@ const Projects = () => {
             className={styles.section}
         >
             <div className={styles.Project}>
-                {/* <Fade left> */}
+                <Fade left>
                     <h3 className={`${styles.heading}`}>
                         Noteworthy Projects
                     </h3>
-                {/* </Fade> */}
+                </Fade>
                 <div className={styles.grid}>
                     <div className={styles.projects}>
                         {List.slice(0, sliceValue).map(
