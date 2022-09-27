@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <div id="layout" >
             <Head>
                 <title>
-                    Vipul Singh
+                    Vipul Singh Portfolio
                 </title>
                 <link
                     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -41,7 +41,11 @@ const Layout = ({ children }) => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.vipulsingh.in.net/" />
                 <meta property="og:image" content="https://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
+                <meta name="twitter:card" content="Portfolio website of Vipul Singh" />
+                <meta name="twitter:description" content="My portfolio website created using tailwindcss & animate.css." />
+                <meta name="twitter:title" content="Vipul Singh Portfolio" />
                 <meta name="twitter:image" content="https://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
+                <meta name="twitter:site" content="https://www.vipulsingh.in.net/" />
                 <meta name="robots" content="index, follow" />
             </Head>
             <Header />
