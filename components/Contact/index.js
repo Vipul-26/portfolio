@@ -19,7 +19,7 @@ const Contact = () => {
                 </Fade>
                 <Fade right>
                     <p className={styles.para}>
-                        Though I&lsquo;m not presently searching for freelance opportunities,
+                        However I&lsquo;m not presently searching for freelance opportunities,
                         my inbox is usually open. Whether or not for a possible project or simply to mention hi, I&lsquo;ll strive my best to answer your email!
                     </p>
                 </Fade>

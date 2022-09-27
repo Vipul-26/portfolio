@@ -153,7 +153,7 @@ const Projects = () => {
             <div className={styles.Project}>
                 <Fade left>
                     <h3 className={`${styles.heading}`}>
-                        Noteworthy Projects
+                        Significant Projects
                     </h3>
                 </Fade>
                 <div className={styles.grid}>
