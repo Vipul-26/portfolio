@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('http://fonts.cdnfonts.com/css/lucida-console');
-
 :root {
   --primary-color: theme(colors.primary);
   --primaryLight-color: theme(colors.primaryLight);
