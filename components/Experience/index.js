@@ -19,7 +19,7 @@ const TabList = [
 
 const list = [
     [
-        "Working as a Front End Developer."
+        "Working as a Front End Developer on developing modules & their story book for a UK based client."
     ],
     [
         "Worked on Micro Front End apps in NextJS, TailwindCSS and ContentStack from scratch.",
@@ -62,7 +62,7 @@ const Experience = () => {
                                     selectedTab === i + 1 ? styles.buttonActive : ''
                                 }
                             >
-                                {tab.company}
+                                {i === 0 ? tab.company : 'TCS'}
                             </button>
                         </li>
                     ))}
