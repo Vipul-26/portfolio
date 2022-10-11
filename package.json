@@ -45,6 +45,8 @@
     "body-parser": "^1.20.0",
     "classnames": "^2.3.2",
     "file-loader": "^6.2.0",
+    "git-revision-webpack-plugin": "^5.0.0",
+    "lodash.get": "^4.4.2",
     "next": "12.3.1",
     "next-sitemap": "^3.1.22",
     "postcss": "^8.4.16",

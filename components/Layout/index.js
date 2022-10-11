@@ -47,6 +47,7 @@ const Layout = ({ children }) => {
                 <meta name="twitter:image" content="https://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75" />
                 <meta name="twitter:site" content="@VipulSi78066437" />
                 <meta name="robots" content="index, follow" />
+                <style type="text/css">{`${process.env.BUILD_DATA}`}</style>
             </Head>
             <Header />
             <main className={classnames('overflow-x-hidden')}>
