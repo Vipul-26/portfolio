@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
                 />
                 <meta name="description" content="This is a portfolio website bootstraped with create-next-app using tailwindcss & animate.css." />
                 <meta name="author" content="Vipul Singh" />
-                <meta name="keywords" content="portfolio, vipul singh portfolio, vipul resume, vipul portfolio" />
+                <meta name="keywords" content="vipul singh vipul portfolio, vipul singh portfolio, vipul singh resume, vipul portfolio" />
                 <meta name="theme-color" content="#0a192f" />
                 <meta property="og:title" content="Vipul's Resume" />
                 <meta property="og:description" content="This is a portfolio website" />
