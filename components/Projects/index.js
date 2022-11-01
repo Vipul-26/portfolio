@@ -114,7 +114,7 @@ const Projects = () => {
                 },
                 {
                     iconName: 'external',
-                    url: 'https://sample-blog-36a85.web.app/',
+                    url: 'https://sample-blog-36a85.firebaseapp.com/',
                 },
             ],
         },
