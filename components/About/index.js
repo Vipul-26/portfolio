@@ -7,6 +7,7 @@ import Zoom from 'react-reveal/Zoom';
 const About = () => {
   const skills = [
     'JavaScript',
+    'Typescript',
     'React',
     'Redux',
     'Redux-Saga',
