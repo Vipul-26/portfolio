@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './projects.module.css';
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 
 const Projects = () => {
     const List = [
@@ -150,7 +150,7 @@ const Projects = () => {
             className={styles.section}
         >
             <div className={styles.Project}>
-                <Fade left>
+                <Fade direction="left">
                     <h3 className={`${styles.heading}`}>
                         Significant Projects
                     </h3>

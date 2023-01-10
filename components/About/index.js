@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './about.module.css';
 import Image from 'next/image';
-import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
+import { Fade, Zoom } from 'react-awesome-reveal';
 
 const About = () => {
   const skills = [
@@ -26,7 +25,7 @@ const About = () => {
         </h3>
       </Zoom>
       <div className={styles.aboutFlexContainer}>
-        <Fade left>
+        <Fade direction="left">
           <div className={styles.aboutContent}>
             <p className='mb-3'>
               Hello! I&lsquo;m Vipul, a Front-End developer based primarily in Sasaram,
@@ -72,7 +71,7 @@ const About = () => {
             </p>
           </div>
         </Fade>
-        <Fade right>
+        <Fade direction="right">
           <div className={styles.aboutPic}>
             <Image
               className={styles.aboutPicImage}

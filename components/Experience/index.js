@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './experience.module.css';
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 
 const TabList = [
     {
@@ -46,7 +46,7 @@ const Experience = () => {
             id="experience"
             className={styles.section}
         >
-            <Fade right>
+            <Fade direction="right">
                 <h3 className={`${styles.heading}`}>
                     Where I've Worked
                 </h3>

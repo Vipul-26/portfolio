@@ -57,8 +57,7 @@
 .aboutPic {
     position: relative;
     width: 40%;
-    max-width: 300px;
-    margin-left: 60px;
+    width: 300px;
 }
 
 .aboutPic a {
@@ -111,14 +110,10 @@
 
 
 .aboutPic {
-    background: #000;
-    background: -moz-linear-gradient(-45deg, #000 0%, #000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
-    background: -webkit-linear-gradient(-45deg, #000 0%, #000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
-    background: linear-gradient(135deg, #000 0%, #000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
     background-size: 400% 400%;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     color: #fff;
     position: relative;
@@ -155,6 +150,7 @@
     .aboutPic {
         margin: 60px auto 0;
         width: 70%;
+        justify-content: center;
     }
 
     .aboutPic a {
