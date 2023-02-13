@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './mobMenu.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./mobMenu.module.css";
 
-const getMenuStyle = isMenuOpen => {
+const getMenuStyle = (isMenuOpen) => {
   return {
-    transform: `translateX(${isMenuOpen ? '0' : '100'}vw)`,
-    visibility: `${isMenuOpen ? 'visible' : 'hidden'}`,
+    transform: `translateX(${isMenuOpen ? "0" : "100"}vw)`,
+    visibility: `${isMenuOpen ? "visible" : "hidden"}`,
   };
 };
 
@@ -21,13 +21,15 @@ const MobMenu = ({ isMenuOpen, toggleMenu, links }) => {
           <ol>
             {links.map(({ name, to }) => (
               <li key={name}>
-                <a href={to}>
-                  {name}
-                </a>
+                <a href={to}>{name}</a>
               </li>
             ))}
           </ol>
-          <a className={styles.resumeLink} href="/">
+          <a
+            className={styles.resumeLink}
+            href="VipulResume.pdf"
+            download="VipulResume"
+          >
             Resume
           </a>
         </div>

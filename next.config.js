@@ -9,7 +9,7 @@ module.exports = {
                 use: ['svgr/webpack'],
             },
             {
-                test: /\.(jpg|JGP|jpeg|png|gif|mp3|svg|ttf|woff2|woff|eot)$/gi,
+                test: /\.(jpg|JGP|jpeg|png|gif|mp3|svg|ttf|woff2|woff|eot|pdf)$/gi,
                 use: ['file-loader'],
             }
         )
