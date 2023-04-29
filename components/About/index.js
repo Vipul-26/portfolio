@@ -1,37 +1,36 @@
-import React from 'react';
-import styles from './about.module.css';
-import Image from 'next/image';
-import { Fade, Zoom } from 'react-awesome-reveal';
+import React from "react";
+import styles from "./about.module.css";
+import Image from "next/image";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 const About = () => {
   const skills = [
-    'JavaScript',
-    'Typescript',
-    'React',
-    'Redux',
-    'Redux-Saga',
-    'NextJS',
-    'Html5',
-    'Css3',
-    'Bootstrap',
-    'TailwindCSS',
-    'Content Stack',
+    "JavaScript",
+    "Typescript",
+    "React",
+    "Redux",
+    "Redux-Saga",
+    "NextJS",
+    "Html5",
+    "Css3",
+    "Bootstrap",
+    "TailwindCSS",
+    "Content Stack",
   ];
   return (
     <section id="about" className={styles.section}>
       <Zoom>
-        <h3 className={`${styles.heading}`}>
-          About Me
-        </h3>
+        <h3 className={`${styles.heading}`}>About Me</h3>
       </Zoom>
       <div className={styles.aboutFlexContainer}>
         <Fade direction="left">
           <div className={styles.aboutContent}>
-            <p className='mb-3'>
-              Hello! I&lsquo;m Vipul, a Front-End developer based primarily in Sasaram,
-              India, who has been jubilantly writing code for responsive websites since 2020.
+            <p className="mb-3">
+              Hello! I&lsquo;m Vipul, a Front-End developer based primarily in
+              Pune, India, who has been jubilantly writing code for responsive
+              websites since 2020.
             </p>
-            <p className='mb-3'>
+            <p className="mb-3">
               After my graduation from
               <a
                 href="https://www.trubainstitute.ac.in/truba-college-of-science-technology/"
@@ -40,8 +39,9 @@ const About = () => {
               >
                 TCST, Bhopal
               </a>
-              , I started my career as a front-end developer and today, after 2.5+ years,
-              as a front-end developer, I worked on a good short of web apps.
+              , I started my career as a front-end developer and today, after
+              2.5+ years, as a front-end developer, I worked on a good short of
+              web apps.
             </p>
             <p>
               Currently, I&lsquo;m working with
@@ -58,7 +58,7 @@ const About = () => {
               Here are a few technologies I&lsquo;ve been working with recently:
             </p>
             <ul>
-              {skills.map(skill => (
+              {skills.map((skill) => (
                 <li key={skill}>{skill}</li>
               ))}
             </ul>

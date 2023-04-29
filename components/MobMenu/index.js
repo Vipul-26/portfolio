@@ -19,7 +19,7 @@ const MobMenu = ({ isMenuOpen, toggleMenu, links }) => {
       <aside className={styles.aside}>
         <div className={styles.nav}>
           <ol>
-            {links.map(({ name, to }) => (
+            {links?.map(({ name, to }) => (
               <li key={name}>
                 <a href={to}>{name}</a>
               </li>
