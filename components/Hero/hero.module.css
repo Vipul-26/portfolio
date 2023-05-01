@@ -8,7 +8,7 @@
 
 .subtitle {
     font-size: 80px;
-    line-height: 1.25;
+    line-height: 1;
     color: var(--tertiary-color);
 }
 
@@ -97,6 +97,10 @@
 
     .description p {
         line-height: 1.4;
+    }
+
+    .subtitle {
+        line-height: 1.25;
     }
 }
 
