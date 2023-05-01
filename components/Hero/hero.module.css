@@ -8,7 +8,7 @@
 
 .subtitle {
     font-size: 80px;
-    line-height: 1;
+    line-height: 1.25;
     color: var(--tertiary-color);
 }
 
