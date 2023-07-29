@@ -19,9 +19,9 @@ const TabList = [
 
 const list = [
   [
-    "Working as a Front End Developer on developing modules & their storybook in React.",
-    "Working on integrating frontend with Rest Api.",
-    "Working on creating several reusable componects using React & Material Ui.",
+    "Working as a Front End Developer on developing modules & their storybook using React, Redux & Material UI.",
+    "Working on integrating frontend with Apis by creating queries & mutations using GraphQL.",
+    "Working on resolving queries & mutations on server side using GraphQL, Apollo, Node JS, Express JS.",
   ],
   [
     "Worked on Micro Front End apps in NextJS, TailwindCSS and ContentStack from scratch.",
