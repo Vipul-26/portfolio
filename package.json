@@ -35,7 +35,7 @@
     "@svgr/webpack": "^6.3.1",
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.12",
-    "axios": "1.2.2",
+    "axios": "1.6.0",
     "babel-helpers": "^6.24.1",
     "babel-loader": "9.1.2",
     "babel-plugin-module-resolver": "5.0.0",
