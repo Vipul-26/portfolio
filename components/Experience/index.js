@@ -13,7 +13,7 @@ const TabList = [
   },
   {
     id: "tcs",
-    company: "Tata Consultancy Services",
+    company: "TCS",
     title: "Web Developer",
     url: "https://www.tcs.com/",
     range: "Sept 2020 - July 2022",
@@ -42,11 +42,11 @@ const containerVariants = {
 export default function Experience() {
   const [selectedIdx, setSelectedIdx] = useState(0);
   const current = TabList[selectedIdx];
-  const [items, setItems] = useState(descriptions[current.id] || []);
+  const [items, setItems] = useState(descriptions[current?.id] || []);
   const tabsRef = useRef([]);
 
   useEffect(() => {
-    setItems(descriptions[current.id] || []);
+    setItems(descriptions[current?.id] || []);
   }, [current]);
 
   // keyboard navigation for tabs
@@ -96,28 +96,26 @@ export default function Experience() {
           className={styles.tablistWrapper}
           onKeyDown={onKeyDown}
         >
-          <ul className={styles.tablist}>
+          <ul
+            className={styles.tablist}
+            role="tablist"
+            aria-label="Work experience"
+          >
             {TabList.map((tab, i) => {
-              const isSelected = selectedIdx === i;
+              const tabId = `tab-${i}`;
+              const panelId = `panel-${i}`;
+              const selected = selectedIdx === i;
               return (
-                <li key={tab.id}>
+                <li key={i}>
                   <button
-                    ref={(el) => (tabsRef.current[i] = el)}
+                    id={tabId}
                     role="tab"
-                    aria-selected={isSelected}
-                    aria-controls={`panel-${tab.id}`}
-                    id={`tab-${tab.id}`}
-                    tabIndex={isSelected ? 0 : -1}
+                    aria-selected={selected}
+                    aria-controls={panelId}
+                    className={selected ? styles.buttonActive : ""}
                     onClick={() => setSelectedIdx(i)}
-                    className={`${styles.tabButton} ${
-                      isSelected ? styles.buttonActive : ""
-                    }`}
-                    type="button"
                   >
-                    {/* Short label on mobile handled by CSS; full company name on desktop */}
-                    <span className={styles.companyLabel}>
-                      {i === 0 ? tab.company : "TCS"}
-                    </span>
+                    {tab.company}
                   </button>
                 </li>
               );
@@ -128,30 +126,30 @@ export default function Experience() {
         <div className={styles.jobContent}>
           <motion.div
             role="tabpanel"
-            id={`panel-${current.id}`}
-            aria-labelledby={`tab-${current.id}`}
+            id={`panel-${current?.id}`}
+            aria-labelledby={`tab-${current?.id}`}
             className={styles.jobTabContent}
-            key={current.id}
+            key={current?.id}
             initial="hidden"
             animate="show"
             variants={containerVariants}
           >
             <h4 className={styles.jobTitle}>
-              <span>{current.title}</span>
+              <span>{current?.title}</span>
               <span className={styles.jobCompany}>
                 <span>&nbsp;@&nbsp;</span>
                 <a
-                  href={current.url}
+                  href={current?.url}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
-                  {current.company}
+                  {current?.company}
                 </a>
               </span>
             </h4>
 
             <h5 className={styles.jobDetail}>
-              <span>{current.range}</span>
+              <span>{current?.range}</span>
             </h5>
 
             <div className={styles.jobDescription}>
