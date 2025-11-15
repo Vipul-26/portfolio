@@ -105,10 +105,10 @@ export default function About() {
           <div className={styles.imageCard} aria-hidden>
             <Image
               src="/Vipul.jpg"
+              width={394}
+              height={507}
               alt="Vipul Kumar Singh"
-              width={320}
-              height={320}
-              className={styles.aboutPicImage}
+              style={{ width: "100%", height: "auto" }}
               priority
             />
           </div>

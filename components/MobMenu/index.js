@@ -1,5 +1,3 @@
-import React from "react";
-import PropTypes from "prop-types";
 import styles from "./mobMenu.module.css";
 
 const getMenuStyle = (isMenuOpen) => {
@@ -36,12 +34,6 @@ const MobMenu = ({ isMenuOpen, toggleMenu, links }) => {
       </aside>
     </div>
   );
-};
-
-MobMenu.propTypes = {
-  isMenuOpen: PropTypes.bool.isRequired,
-  toggleMenu: PropTypes.func.isRequired,
-  links: PropTypes.array.isRequired,
 };
 
 export default MobMenu;

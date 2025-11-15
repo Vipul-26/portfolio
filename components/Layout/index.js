@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import classnames from "classnames";
 import Header from "../Header";
 import Footer from "../Footer";
 
@@ -63,7 +62,7 @@ const Layout = ({ children }) => {
       </Head>
 
       <Header />
-      <main className={classnames("overflow-x-hidden")}>{children}</main>
+      <main className="overflow-x-hidden">{children}</main>
       <Footer />
     </div>
   );
