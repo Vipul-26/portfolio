@@ -24,6 +24,19 @@ const BUILD_DATA = `
   build time: ${date.toDateString()} ${date.toTimeString()}
 `;
 
+/** Allow vercel.live only on preview deployments to avoid CSP console errors */
+const isPreview = process.env.VERCEL_ENV === "preview";
+
+/** Content Security Policy
+ *
+ * - We keep production strict.
+ * - For preview builds we allow the Vercel Live script **only** for script elements
+ *   via script-src-elem so inline/script execution policies remain restrictive.
+ */
+const scriptSrc = isPreview
+  ? `script-src 'self' 'unsafe-inline' 'unsafe-eval'; script-src-elem 'self' https://vercel.live;`
+  : `script-src 'self' 'unsafe-inline' 'unsafe-eval';`;
+
 /** Content Security Policy */
 const csp = `
   default-src 'self';
@@ -33,7 +46,7 @@ const csp = `
   img-src 'self' https: data: blob:;
   font-src 'self' https: data:;
   style-src 'self' 'unsafe-inline' https:;
-  script-src 'self' 'unsafe-inline' 'unsafe-eval';
+  ${scriptSrc}
   connect-src 'self' https:;
   form-action 'self' mailto:;
   upgrade-insecure-requests;
