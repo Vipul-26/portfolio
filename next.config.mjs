@@ -24,20 +24,19 @@ const BUILD_DATA = `
   build time: ${date.toDateString()} ${date.toTimeString()}
 `;
 
-/** Allow vercel.live only on preview deployments to avoid CSP console errors */
+/** detect preview */
 const isPreview = process.env.VERCEL_ENV === "preview";
 
-/** Content Security Policy
- *
- * - We keep production strict.
- * - For preview builds we allow the Vercel Live script **only** for script elements
- *   via script-src-elem so inline/script execution policies remain restrictive.
- */
-const scriptSrc = isPreview
-  ? `script-src 'self' 'unsafe-inline' 'unsafe-eval'; script-src-elem 'self' https://vercel.live;`
+/** script-src: include vercel.live in preview (both directives to be safe) */
+const scriptSrcFallback = isPreview
+  ? `script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live;`
   : `script-src 'self' 'unsafe-inline' 'unsafe-eval';`;
 
-/** Content Security Policy */
+const scriptSrcElem = isPreview
+  ? `script-src-elem 'self' https://vercel.live;`
+  : `script-src-elem 'self';`;
+
+/** Compose CSP */
 const csp = `
   default-src 'self';
   base-uri 'self';
@@ -46,7 +45,8 @@ const csp = `
   img-src 'self' https: data: blob:;
   font-src 'self' https: data:;
   style-src 'self' 'unsafe-inline' https:;
-  ${scriptSrc}
+  ${scriptSrcFallback}
+  ${scriptSrcElem}
   connect-src 'self' https:;
   form-action 'self' mailto:;
   upgrade-insecure-requests;
@@ -74,26 +74,20 @@ const nextConfig = {
   reactStrictMode: true,
   typedRoutes: true,
 
-  // ✅ Expose build metadata to client/server (Turbopack-friendly)
-  //    Use with: process.env.BUILD_DATA
+  // expose build metadata
   env: {
     BUILD_DATA,
   },
 
-  // ✅ Keep your headers (Turbopack supports this)
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
 
-  // ✅ Explicit empty turbopack config silences the warning
   turbopack: {},
 
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
-
-  // If you load remote images, uncomment and list domains:
-  // images: { domains: ["images.unsplash.com", "avatars.githubusercontent.com"] },
 };
 
 export default nextConfig;
