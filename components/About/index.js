@@ -1,7 +1,17 @@
 import React from "react";
-import styles from "./about.module.css";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import { Fade, Zoom } from "react-awesome-reveal";
+import styles from "./about.module.css";
+
+const Fade = dynamic(
+  () => import("react-awesome-reveal").then((mod) => mod.Fade),
+  { ssr: false }
+);
+
+const Zoom = dynamic(
+  () => import("react-awesome-reveal").then((mod) => mod.Zoom),
+  { ssr: false }
+);
 
 const About = () => {
   const skills = [

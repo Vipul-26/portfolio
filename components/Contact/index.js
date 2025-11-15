@@ -1,6 +1,16 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import styles from "./contact.module.css";
-import { JackInTheBox, Fade } from "react-awesome-reveal";
+
+const JackInTheBox = dynamic(
+  () => import("react-awesome-reveal").then((mod) => mod.JackInTheBox),
+  { ssr: false }
+);
+
+const Fade = dynamic(
+  () => import("react-awesome-reveal").then((mod) => mod.Fade),
+  { ssr: false }
+);
 
 const Contact = () => {
   return (

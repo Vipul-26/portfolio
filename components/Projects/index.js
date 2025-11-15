@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import styles from "./projects.module.css";
-import { Fade } from "react-awesome-reveal";
+
+const Fade = dynamic(
+  () => import("react-awesome-reveal").then((mod) => mod.Fade),
+  { ssr: false }
+);
 
 const Projects = () => {
   const List = [

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import styles from "./experience.module.css";
-import { Fade } from "react-awesome-reveal";
+
+const Fade = dynamic(
+  () => import("react-awesome-reveal").then((mod) => mod.Fade),
+  { ssr: false }
+);
 
 const TabList = [
   {
