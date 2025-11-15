@@ -1,193 +1,151 @@
-.aboutFlexContainer {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.aboutContent {
-    width: 60%;
-    max-width: 480px;
-}
-
-.aboutContent a {
-    display: inline;
-    margin: 0 3.5px;
-}
-
-.aboutContent ul {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-.aboutContent ul li {
-    position: relative;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    color: var(--tertiary-color);
-}
-
-.aboutContent ul li:before {
-    content: "▹";
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-size: 14px;
-    line-height: 12px;
-    margin-top: 5px;
-}
-
-.aboutContent p {
-    line-height: 1.5;
-}
-
-.aboutContent p a {
-    color: var(--primary-color);
-}
-
-.aboutContent p a:hover {
-    text-decoration: underline;
-    outline: none;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.aboutPic {
-    position: relative;
-    width: 40%;
-    width: 300px;
-}
-
-.aboutPic a {
-    width: 100%;
-    position: absolute;
-    border-radius: 3px;
-    margin-left: -20px;
-    top: 15px;
-    left: 15px;
-}
-
 .section {
     margin: 0 auto;
-    min-width: 1000px;
+    padding: 80px 20px 0 20px;
+    max-width: 1100px;
     position: relative;
 }
 
 .heading {
     position: relative;
     display: flex;
-    align-items: baseline;
-    margin: 10px 0 40px;
-    width: 100%;
-    white-space: nowrap;
-    font-size: 32px;
+    align-items: center;
+    margin: 0 0 28px;
+    color: var(--primary-color);
+    font-size: 24px;
 }
 
 .heading:before {
-    counter-increment: section;
-    content: "0"counter(section) ".";
+    content: "01.";
     margin-right: 10px;
-    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
-    font-weight: normal;
     color: var(--primary-color);
-    font-size: 20px;
-    position: relative;
-    bottom: 4px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .heading:after {
     content: "";
     display: block;
     height: 1px;
-    width: 300px;
+    width: 220px;
     background-color: var(--tertiary-color);
+    margin-left: 18px;
     position: relative;
-    top: -10px;
-    margin-left: 20px;
 }
 
+.aboutFlexContainer {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.aboutContent {
+    flex: 1 1 420px;
+    min-width: 260px;
+    max-width: 680px;
+    color: var(--tertiary-color);
+}
+
+.aboutContent p {
+    line-height: 1.6;
+    margin-bottom: 0.9rem;
+    color: var(--tertiary-color);
+}
+
+.aboutContent a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 180ms ease, text-decoration 180ms ease;
+}
+
+.aboutContent a:hover,
+.aboutContent a:focus {
+    text-decoration: underline;
+    color: var(--primary-color);
+    outline: none;
+}
+
+.skillList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 8px 18px;
+    margin-top: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.skillList li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 15px;
+    color: var(--tertiary-color);
+    align-items: center;
+    display: flex;
+    line-height: 1.4;
+}
+
+.skillList li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 14px;
+    line-height: 1;
+    top: 2px;
+}
 
 .aboutPic {
-    background-size: 400% 400%;
-    background-repeat: no-repeat;
+    flex: 0 0 320px;
     display: flex;
-    justify-content: right;
     align-items: center;
-    color: #fff;
-    position: relative;
-    cursor: pointer;
-    transition: 0.5s all;
+    justify-content: center;
+    min-width: 220px;
+}
+
+.imageCard {
+    width: 320px;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(100, 255, 218, 0.06), rgba(136, 146, 176, 0.02));
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 300ms ease;
+}
+
+.imageCard:hover,
+.imageCard:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
 }
 
 .aboutPicImage {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-size: cover;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    opacity: 0.8;
-    mix-blend-mode: screen;
-}
-
-.aboutPic:hover {
-    background-position: 100% 100%;
+    display: block;
 }
 
 @media (max-width: 1023px) {
     .aboutFlexContainer {
-        display: block;
+        gap: 28px;
+    }
+
+    .imageCard {
+        width: 280px;
+        height: 280px;
+    }
+
+    .aboutPic {
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top: 18px;
     }
 
     .aboutContent {
-        width: 100%;
-        max-width: inherit;
-    }
-
-    .aboutPic {
-        margin: 60px auto 0;
-        width: 70%;
-        justify-content: center;
-    }
-
-    .aboutPic a {
-        position: inherit;
-        border-radius: 3px;
-    }
-
-    .section {
-        padding: 100px 0;
-        padding-top: 50px;
-        min-width: fit-content;
-        margin: 0;
-    }
-
-    .heading:after {
-        width: inherit;
-    }
-}
-
-@media (max-width: 767px) {
-    .aboutPic {
-        width: 70% !important;
-    }
-
-    .section {
-        padding-top: 150px;
-        padding-bottom: 50px;
-    }
-
-    .heading {
-        font-size: 20px;
-        align-items: end;
-    }
-
-    .heading:before {
-        font-size: 18px;
-        bottom: 1px;
+        flex-basis: 100%;
     }
 
     .heading:after {
@@ -195,8 +153,13 @@
     }
 }
 
-@media (max-width: 480px) {
-    .heading:after {
-        margin-left: 10px;
+@media (max-width: 640px) {
+    .skillList {
+        grid-template-columns: 1fr;
+    }
+
+    .imageCard {
+        width: 220px;
+        height: 220px;
     }
 }

@@ -1,17 +1,15 @@
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-color: theme(colors.primary);
-  --primaryLight-color: theme(colors.primaryLight);
-  --secondary-color: theme(colors.secondary);
-  --secondaryLight-color: theme(colors.secondaryLight);
-  --secondaryLighter-color: theme(colors.secondaryLighter);
-  --secondaryLightest-color: theme(colors.secondaryLightest);
-  --tertiary-color: theme(colors.tertiary);
-  --tertiaryLight-color: theme(colors.tertiaryLight);
-  --tertiaryLighter-color: theme(colors.tertiaryLighter);
+@theme {
+  --primary-color: #64ffda;
+  --primaryLight-color: rgba(100, 255, 218, 0.07);
+  --secondary-color: #0a192f;
+  --secondaryLight-color: #172a45;
+  --secondaryLighter-color: #020c1b;
+  --secondaryLightest-color: #ccd6f6;
+  --tertiary-color: #8892b0;
+  --tertiaryLight-color: #a8b2d1;
+  --tertiaryLighter-color: #ccd6f6;
 }
 
 html,
@@ -21,6 +19,7 @@ body {
   background-color: var(--secondary-color);
   color: var(--tertiary-color);
   line-height: 1.2;
+  font-family: "Lucida Console", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -28,10 +27,27 @@ a {
   text-decoration: none;
 }
 
+/* Restore list bullets with spacing */
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 1.5rem;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-left: 1.5rem;
+}
+
 .bounce:hover {
   position: relative;
   animation: bounce 0.5s normal linear;
   animation-iteration-count: 1;
+}
+
+button {
+  font-family: "Lucida Console", Helvetica, Arial, sans-serif;
 }
 
 @keyframes bounce {
@@ -71,7 +87,6 @@ a {
 }
 
 @media screen and (max-width: 1023px) {
-
   html,
   body {
     width: fit-content;

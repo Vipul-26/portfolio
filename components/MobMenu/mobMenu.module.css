@@ -23,7 +23,6 @@
   position: relative;
   right: 0;
   margin-left: auto;
-  font-family: "Lucida Console", Helvetica, Arial, sans-serif;
   box-shadow: -10px 0px 30px -15px hsla(0, 0%, 57.3%, 0.2);
   font-size: larger;
 }
@@ -73,7 +72,6 @@
   border: 2px solid var(--primary-color);
   border-radius: 3px;
   padding: 18px 50px;
-  font-family: "Lucida Console", Helvetica, Arial, sans-serif;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
