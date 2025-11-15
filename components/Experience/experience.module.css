@@ -36,6 +36,11 @@
     background-color: var(--secondaryLighter-color);
 }
 
+.tablist button:focus {
+  outline: 3px solid rgba(100,255,218,0.2);
+  outline-offset: 2px;
+}
+
 .buttonActive {
     color: var(--primary-color) !important;
     border-left-color: var(--primary-color) !important;

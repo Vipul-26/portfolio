@@ -52,28 +52,37 @@ export default function Experience() {
   // keyboard navigation for tabs
   function onKeyDown(e) {
     const max = TabList.length - 1;
+    // find currently focused tab index (prefer actual selectedIdx)
+    const focusedIndex = tabsRef.current.findIndex(
+      (el) => el === document.activeElement
+    );
+    const baseIndex = focusedIndex >= 0 ? focusedIndex : selectedIdx;
+
     if (["ArrowLeft", "ArrowUp"].includes(e.key)) {
       e.preventDefault();
-      setSelectedIdx((i) => (i - 1 < 0 ? max : i - 1));
-      tabsRef.current[
-        (selectedIdx - 1 + TabList.length) % TabList.length
-      ]?.focus();
+      const next = baseIndex - 1 < 0 ? max : baseIndex - 1;
+      setSelectedIdx(next);
+      // focus after state change (use setTimeout to ensure element exists)
+      setTimeout(() => tabsRef.current[next]?.focus(), 0);
     } else if (["ArrowRight", "ArrowDown"].includes(e.key)) {
       e.preventDefault();
-      setSelectedIdx((i) => (i + 1 > max ? 0 : i + 1));
-      tabsRef.current[(selectedIdx + 1) % TabList.length]?.focus();
+      const next = baseIndex + 1 > max ? 0 : baseIndex + 1;
+      setSelectedIdx(next);
+      setTimeout(() => tabsRef.current[next]?.focus(), 0);
     } else if (e.key === "Home") {
       e.preventDefault();
       setSelectedIdx(0);
-      tabsRef.current[0]?.focus();
+      setTimeout(() => tabsRef.current[0]?.focus(), 0);
     } else if (e.key === "End") {
       e.preventDefault();
       setSelectedIdx(max);
-      tabsRef.current[max]?.focus();
+      setTimeout(() => tabsRef.current[max]?.focus(), 0);
     } else if (e.key === "Enter" || e.key === " ") {
-      // Enter/Space behavior is handled by button onClick, but ensure not to double-run
+      // Enter/Space: the focused tab button is already a button (click is not necessary),
+      // but we prevent default to avoid page scroll on Space.
       e.preventDefault();
-      // no-op — button click already sets selected index when focused + pressed
+      // ensure the focused button becomes selected (use its index)
+      if (focusedIndex >= 0) setSelectedIdx(focusedIndex);
     }
   }
 
@@ -89,67 +98,81 @@ export default function Experience() {
       </motion.h3>
 
       <div className={styles.jobTabs}>
-        {/* Accessible tablist */}
-        <div
+        {/* Single tablist element (ul) with role="tablist" */}
+        <ul
+          className={styles.tablist}
           role="tablist"
           aria-label="Work experience"
-          className={styles.tablistWrapper}
           onKeyDown={onKeyDown}
         >
-          <ul
-            className={styles.tablist}
-            role="tablist"
-            aria-label="Work experience"
-          >
-            {TabList.map((tab, i) => {
-              const tabId = `tab-${i}`;
-              const panelId = `panel-${i}`;
-              const selected = selectedIdx === i;
-              return (
-                <li key={i}>
-                  <button
-                    id={tabId}
-                    role="tab"
-                    aria-selected={selected}
-                    aria-controls={panelId}
-                    className={selected ? styles.buttonActive : ""}
-                    onClick={() => setSelectedIdx(i)}
-                  >
-                    {tab.company}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+          {TabList.map((tab, i) => {
+            const tabId = `tab-${tab.id}`;
+            const panelId = `panel-${tab.id}`;
+            const selected = selectedIdx === i;
+
+            return (
+              // role="presentation" so the li doesn't interfere with accessibility tree for tablist
+              <li key={tab.id} role="presentation">
+                <button
+                  id={tabId}
+                  ref={(el) => (tabsRef.current[i] = el)}
+                  role="tab"
+                  aria-selected={selected}
+                  aria-controls={panelId}
+                  tabIndex={selected ? 0 : -1}
+                  className={selected ? styles.buttonActive : ""}
+                  onClick={() => setSelectedIdx(i)}
+                  // keep native focus styles; you can enhance visually in CSS
+                >
+                  {tab.company}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
 
         <div className={styles.jobContent}>
-          <motion.div
-            role="tabpanel"
-            id={`panel-${current?.id}`}
-            aria-labelledby={`tab-${current?.id}`}
-            className={styles.jobTabContent}
-            key={current?.id}
-            initial="hidden"
-            animate="show"
-            variants={containerVariants}
-          >
-            <h4 className={styles.jobTitle}>
-              <span>{current?.title}</span>
-            </h4>
+          {TabList.map((tab, i) => {
+            const panelId = `panel-${tab.id}`;
+            const tabId = `tab-${tab.id}`;
+            const selected = selectedIdx === i;
 
-            <h5 className={styles.jobDetail}>
-              <span>{current?.range}</span>
-            </h5>
+            return (
+              <motion.div
+                key={tab.id}
+                role="tabpanel"
+                id={panelId}
+                aria-labelledby={tabId}
+                className={styles.jobTabContent}
+                initial="hidden"
+                animate="show"
+                variants={containerVariants}
+                // keep panel out of accessibility tree when not selected:
+                hidden={!selected}
+              >
+                {/* Render content only for selected panel (optional) */}
+                {selected && (
+                  <>
+                    <h4 className={styles.jobTitle}>
+                      <span>{tab.title}</span>
+                    </h4>
 
-            <div className={styles.jobDescription}>
-              <ul>
-                {items.map((it) => (
-                  <li key={it}>{it}</li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
+                    <h5 className={styles.jobDetail}>
+                      <span>{tab.range}</span>
+                    </h5>
+
+                    <div className={styles.jobDescription}>
+                      <ul>
+                        {(descriptions[tab.id] || []).map((it) => (
+                          <li key={it}>{it}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
