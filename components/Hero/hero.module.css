@@ -1,112 +1,67 @@
-.overline {
-    color: var(--primary-color);
-    margin: 0 0 20px 3px;
-    font-size: 18px;
-    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
-    font-weight: 800;
+.section {
+    margin: 0 auto;
+    padding: 150px 0 50px 0;
+    max-width: 1024px;
+    width: 100%;
 }
 
-.subtitle {
-    font-size: 80px;
-    line-height: 1;
+.overline {
     color: var(--tertiary-color);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.name {
+    font-size: clamp(45px, 8vw, 60px);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+.andText {
+    font-size: 24px;
+    color: var(--tertiaryLight-color);
+    margin-bottom: 10px;
+}
+
+.typingWrapper {
+    min-height: 45px;
+}
+
+.typedText {
+    font-size: clamp(30px, 5vw, 30px);
+    font-weight: 500;
+    color: var(--primary-color);
 }
 
 .description {
-    width: 50%;
+    margin-top: 30px;
     font-size: 20px;
-    max-width: 500px;
-    margin-bottom: 2.5rem;
-}
-
-.description p {
-    line-height: initial;
+    max-width: 550px;
+    color: var(--tertiaryLight-color);
+    line-height: 1.5;
 }
 
 .getIntouch {
+    margin-top: 40px;
+    display: inline-block;
     color: var(--primary-color);
-    background-color: transparent;
     border: 2px solid var(--primary-color);
-    border-radius: 3px;
-    padding: 1.25rem 1.75rem;
-    font-size: 16px;
-    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
-    line-height: 1;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
     text-decoration: none;
-    cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    margin-top: 1rem;
+    transition: 0.2s ease;
 }
 
 .getIntouch:hover {
     background-color: var(--primaryLight-color);
-}
-
-.section {
-    margin: 0 auto;
-    padding: 150px 0;
-    max-width: 1000px;
-}
-
-.container {
-    font-size: 4em;
-    height: 80px;
-    width: 200px;
-    display: block;
-    color: white;
-    margin: auto;
-    position: relative;
-}
-
-@media (max-width: 1023px) {
-    .overline {
-        font-size: 16px;
-    }
-
-    .container, .subtitle {
-        font-size: 70px;
-    }
-
-    .section {
-        padding: 150px 0;
-    }
+    transform: translateY(-2px);
 }
 
 @media (max-width: 767px) {
-    .overline {
-        font-size: 15px;
-    }
-
-    .container, .subtitle {
-        font-size: 50px;
-    }
-
-    .container {
-        height: 50px;
-    }
-
-    .section {
-        padding-top: 100px;
-        padding-bottom: 0;
-    }
-
     .description {
         font-size: 18px;
-        margin-bottom: 3rem;
-    }
-
-    .description p {
-        line-height: 1.4;
-    }
-
-    .subtitle {
-        line-height: 1.25;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .container, .subtitle {
-        font-size: 38px;
     }
 }

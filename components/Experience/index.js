@@ -1,101 +1,169 @@
-import React, { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
+// components/Experience/index.js
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import styles from "./experience.module.css";
-
-const Fade = dynamic(
-  () => import("react-awesome-reveal").then((mod) => mod.Fade),
-  { ssr: false }
-);
 
 const TabList = [
   {
+    id: "amdocs",
     company: "AMDOCS",
     title: "Software Developer",
     url: "https://www.amdocs.com/",
-    range: "July 2k22 - Present",
+    range: "July 2022 - Present",
   },
   {
+    id: "tcs",
     company: "Tata Consultancy Services",
     title: "Web Developer",
     url: "https://www.tcs.com/",
-    range: "Sept 2k20 - July 2k22",
+    range: "Sept 2020 - July 2022",
   },
 ];
 
-const list = [
-  [
-    "Working as a Front End Developer on developing modules & their storybook using React, Redux & Material UI.",
-    "Working on integrating frontend with Apis by creating queries & mutations using GraphQL.",
-    "Working on resolving queries & mutations on server side using GraphQL, Apollo, Node JS, Express JS.",
+const descriptions = {
+  amdocs: [
+    "Working as a Front End Developer developing modules & storybook using React, Redux & Material UI.",
+    "Integrating frontend with APIs by creating queries & mutations using GraphQL.",
+    "Resolving queries & mutations on server side using GraphQL, Apollo, Node.js and Express.",
   ],
-  [
-    "Worked on Micro Front End apps in NextJS, TailwindCSS and ContentStack from scratch.",
-    "Worked on different features, stories & enhancements for a US based client's retail e-Commerce websites.",
-    "Worked on performance improvement of websites.",
-    "Worked on Migrating the same retail websites from Drupal to ContentStack.",
+  tcs: [
+    "Worked on Micro Front End apps in NextJS, TailwindCSS and Contentstack from scratch.",
+    "Built features, stories & enhancements for a US-based retail e-commerce website.",
+    "Worked on performance improvements and migration from Drupal to Contentstack.",
     "Built several reusable components in React.",
   ],
-];
+};
 
-const Experience = () => {
-  const [finalData, setFinal] = useState([]);
-  const [selectedTab, selectTab] = useState(1);
-  const { title, company, url, range } = TabList[selectedTab - 1];
+const containerVariants = {
+  hidden: { opacity: 0, y: 8 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
+
+export default function Experience() {
+  const [selectedIdx, setSelectedIdx] = useState(0);
+  const current = TabList[selectedIdx];
+  const [items, setItems] = useState(descriptions[current.id] || []);
+  const tabsRef = useRef([]);
 
   useEffect(() => {
-    const selectedList = selectedTab === 1 ? list[0] : list[1];
-    setFinal(selectedList);
-  }, [selectedTab]);
+    setItems(descriptions[current.id] || []);
+  }, [current]);
+
+  // keyboard navigation for tabs
+  function onKeyDown(e) {
+    const max = TabList.length - 1;
+    if (["ArrowLeft", "ArrowUp"].includes(e.key)) {
+      e.preventDefault();
+      setSelectedIdx((i) => (i - 1 < 0 ? max : i - 1));
+      tabsRef.current[
+        (selectedIdx - 1 + TabList.length) % TabList.length
+      ]?.focus();
+    } else if (["ArrowRight", "ArrowDown"].includes(e.key)) {
+      e.preventDefault();
+      setSelectedIdx((i) => (i + 1 > max ? 0 : i + 1));
+      tabsRef.current[(selectedIdx + 1) % TabList.length]?.focus();
+    } else if (e.key === "Home") {
+      e.preventDefault();
+      setSelectedIdx(0);
+      tabsRef.current[0]?.focus();
+    } else if (e.key === "End") {
+      e.preventDefault();
+      setSelectedIdx(max);
+      tabsRef.current[max]?.focus();
+    } else if (e.key === "Enter" || e.key === " ") {
+      // Enter/Space behavior is handled by button onClick, but ensure not to double-run
+      e.preventDefault();
+      // no-op — button click already sets selected index when focused + pressed
+    }
+  }
 
   return (
     <section id="experience" className={styles.section}>
-      <Fade direction="right">
-        <h3 className={`${styles.heading}`}>Where I've Worked</h3>
-      </Fade>
+      <motion.h3
+        className={styles.heading}
+        initial="hidden"
+        animate="show"
+        variants={containerVariants}
+      >
+        Where I've Worked
+      </motion.h3>
+
       <div className={styles.jobTabs}>
-        <ul className={styles.tablist}>
-          {TabList.map((tab, i) => (
-            <li key={i}>
-              <button
-                onClick={() => selectTab(i + 1)}
-                type="button"
-                className={selectedTab === i + 1 ? styles.buttonActive : ""}
-              >
-                {i === 0 ? tab.company : "TCS"}
-              </button>
-            </li>
-          ))}
-        </ul>
+        {/* Accessible tablist */}
+        <div
+          role="tablist"
+          aria-label="Work experience"
+          className={styles.tablistWrapper}
+          onKeyDown={onKeyDown}
+        >
+          <ul className={styles.tablist}>
+            {TabList.map((tab, i) => {
+              const isSelected = selectedIdx === i;
+              return (
+                <li key={tab.id}>
+                  <button
+                    ref={(el) => (tabsRef.current[i] = el)}
+                    role="tab"
+                    aria-selected={isSelected}
+                    aria-controls={`panel-${tab.id}`}
+                    id={`tab-${tab.id}`}
+                    tabIndex={isSelected ? 0 : -1}
+                    onClick={() => setSelectedIdx(i)}
+                    className={`${styles.tabButton} ${
+                      isSelected ? styles.buttonActive : ""
+                    }`}
+                    type="button"
+                  >
+                    {/* Short label on mobile handled by CSS; full company name on desktop */}
+                    <span className={styles.companyLabel}>
+                      {i === 0 ? tab.company : "TCS"}
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
         <div className={styles.jobContent}>
-          <div className={styles.jobTabContent}>
+          <motion.div
+            role="tabpanel"
+            id={`panel-${current.id}`}
+            aria-labelledby={`tab-${current.id}`}
+            className={styles.jobTabContent}
+            key={current.id}
+            initial="hidden"
+            animate="show"
+            variants={containerVariants}
+          >
             <h4 className={styles.jobTitle}>
-              <span>{title}</span>
+              <span>{current.title}</span>
               <span className={styles.jobCompany}>
-                <span>&nbsp;@</span>
+                <span>&nbsp;@&nbsp;</span>
                 <a
-                  href={url}
+                  href={current.url}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
-                  {company}
+                  {current.company}
                 </a>
               </span>
             </h4>
+
             <h5 className={styles.jobDetail}>
-              <span>{range}</span>
+              <span>{current.range}</span>
             </h5>
-            <div>
+
+            <div className={styles.jobDescription}>
               <ul>
-                {finalData.map((item) => (
-                  <li key={item}>{item}</li>
+                {items.map((it) => (
+                  <li key={it}>{it}</li>
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Experience;
+}

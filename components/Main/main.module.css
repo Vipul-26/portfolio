@@ -5,9 +5,9 @@
     min-height: 100vh;
 }
 
-.home div {
+/* .home div {
     width: 100%;
-}
+} */
 
 @media screen and (max-width: 1023px) {
     .home {

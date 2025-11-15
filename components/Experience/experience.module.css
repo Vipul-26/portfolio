@@ -1,76 +1,77 @@
 .jobTabs {
     display: flex;
     align-items: flex-start;
+    gap: 30px;
     position: relative;
 }
 
 .jobTabs .tablist {
-    display: block;
-    position: relative;
-    width: max-content;
-    z-index: 3;
+    list-style: none;
+    margin-left: 0;
+    padding-inline-start: 0;
 }
 
 .jobTabs .tablist li button {
+    all: unset;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    width: 100%;
-    background-color: transparent;
+    width: 55px;
+    background: transparent;
     height: 42px;
     padding: 0 20px 2px;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     border-left: 3px solid var(--tertiary-color);
     text-align: left;
     white-space: nowrap;
-    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
     font-size: 15px;
+    color: var(--tertiaryLight-color);
+    transition:
+        background-color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
+        border-color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
+        color 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.jobTabs .tablist li button:hover, .jobTabs .tablist li button:focus {
+.jobTabs .tablist li button:hover,
+.jobTabs .tablist li button:focus-visible {
     background-color: var(--secondaryLighter-color);
 }
 
 .buttonActive {
     color: var(--primary-color) !important;
-    border-left: 3px solid var(--primary-color) !important;
+    border-left-color: var(--primary-color) !important;
     font-weight: 700;
 }
 
 .jobContent {
-    position: relative;
-    padding-top: 12px;
-    padding-left: 30px;
+    padding-left: 24px;
 }
 
 .jobTabContent {
-    top: 0;
-    left: 0;
     width: 100%;
-    height: auto;
 }
 
 .jobTabContent ul {
     padding: 0;
     margin: 0;
-    width: 100%;
     list-style: none;
 }
 
 .jobTabContent ul li {
     position: relative;
-    padding-left: 30px;
-    margin-bottom: 10px;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: var(--tertiaryLight-color);
+    line-height: 1.55;
+    letter-spacing: 0.3px;
 }
 
 .jobTabContent ul li:before {
     content: "▹";
     position: absolute;
     left: 0;
+    top: 2px;
     color: var(--primary-color);
-    line-height: 20px;
-    margin-top: 3px;
+    font-size: 16px;
 }
 
 .jobTitle {
@@ -85,97 +86,59 @@
 }
 
 .jobDetail {
-    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
     font-size: 15px;
-    font-weight: normal;
-    letter-spacing: 0.5px;
     color: var(--tertiaryLight-color);
-    margin-bottom: 30px;
-    margin-top: 0.8rem;
-}
-
-.jobDetail svg {
-    width: 15px;
-}
-
-.jobDescription ul {
-    padding: 0;
-    width: 100%;
-    margin: 0;
-    list-style: none;
-    font-size: 18px;
-}
-
-.jobDescription ul li {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 10px;
-    line-height: 1.5;
     letter-spacing: 0.5px;
-}
-
-.jobDescription ul li:before {
-    content: "▹";
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    line-height: 20px;
+    margin-bottom: 28px;
+    margin-top: 8px;
 }
 
 .section {
     margin: 0 auto;
     padding: 100px 0;
-    padding-bottom: 0;
-    max-width: 750px;
+    max-width: 1024px;
     position: relative;
-
 }
 
 .heading {
     position: relative;
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    gap: 12px;
     margin: 10px 0 40px;
-    width: 100%;
+    color: var(--primary-color);
+    font-size: 24px;
     white-space: nowrap;
-    font-size: 32px;
 }
 
 .heading:before {
-    content: "02"".";
-    margin-right: 10px;
-    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
-    font-weight: normal;
+    content: "02.";
+    font-size: 16px;
     color: var(--primary-color);
-    font-size: 20px;
     position: relative;
-    bottom: 4px;
 }
 
 .heading:after {
     content: "";
-    display: block;
+    flex: 1;
     height: 1px;
-    width: 300px;
     background-color: var(--tertiary-color);
+    margin-left: 12px;
     position: relative;
-    top: -10px;
-    margin-left: 20px;
 }
 
-
 @media (max-width: 1023px) {
-    .jobContent {
-        padding-left: 20px;
-    }
-
     .section {
         padding: 100px 0;
         max-width: 1000px !important;
     }
 
     .heading:after {
-        width: inherit;
+        width: auto;
+    }
+
+    .jobContent {
+        padding-left: 20px;
     }
 
     .jobTabs .tablist li button {
@@ -187,56 +150,49 @@
 }
 
 @media (max-width: 767px) {
-    .buttonActive {
-        color: var(--primary-color) !important;
-        border-left-width: 0 !important;
-        border-bottom: 2px solid var(--primary-color) !important;
-    }
-
     .jobTabs {
-        display: block;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .jobTabs .tablist {
         display: flex;
-        overflow-x: scroll;
-        margin-bottom: 30px;
-        width: calc(100% + 100px);
-        margin-left: -50px;
+        overflow-x: auto;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
     }
 
     .jobTabs .tablist li:first-of-type {
-        margin-left: 50px;
-    }
-
-    .jobTabs .tablist li:last-of-type {
-        padding-right: 50px;
+        margin-left: 10px;
     }
 
     .jobTabs .tablist li button {
         padding: 0 15px;
-        text-align: center;
-        border-left: 0;
+        border-left: none;
         border-bottom: 2px solid var(--tertiary-color);
         min-width: 120px;
+        text-align: center;
     }
 
-    .jobTitle {
-        font-size: 19px;
+    .buttonActive {
+        border-bottom: 2px solid var(--primary-color) !important;
     }
 
     .jobContent {
         padding-left: 0;
     }
 
+    .jobTitle {
+        font-size: 19px;
+    }
+
     .section {
-        padding-top: 100px;
+        padding-top: 90px;
         padding-bottom: 25px;
     }
 
     .heading {
         font-size: 20px;
-        align-items: end;
     }
 
     .heading:before {
@@ -245,26 +201,19 @@
     }
 
     .heading:after {
-        width: 100%;
+        height: 1px;
+        flex: 1;
     }
 }
 
 @media (max-width: 480px) {
     .jobTabs .tablist {
-        width: calc(100% + 50px);
-        margin-left: -25px;
+        width: calc(100% + 40px);
+        margin-left: -20px;
     }
 
     .jobTabs .tablist li:first-of-type {
-        margin-left: 25px;
-    }
-
-    .jobTabs .tablist li:last-of-type {
-        padding-right: 25px;
-    }
-
-    .jobTabs .tablist li button {
-        padding: 0 15px 2px;
+        margin-left: 20px;
     }
 
     .heading:after {

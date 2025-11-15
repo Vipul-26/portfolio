@@ -8,7 +8,6 @@ const Layout = ({ children }) => {
   return (
     <div id="layout">
       <Head>
-        {/* ✅ Title & basic meta */}
         <title>Vipul Singh Portfolio</title>
         <meta
           name="description"
@@ -24,32 +23,11 @@ const Layout = ({ children }) => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.vipulsingh.in.net/" />
 
-        {/* ✅ Font Awesome (secure & non-blocking) */}
-        <link
-          rel="preconnect"
-          href="https://cdnjs.cloudflare.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-
-        {/* ✅ Animate.css – preloaded correctly instead of prefetch */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-
-        {/* ✅ Favicons */}
+        {/* Favicons */}
         <link rel="shortcut icon" href="/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
 
-        {/* ✅ Open Graph / Twitter meta */}
+        {/* OG & Twitter */}
         <meta property="og:title" content="Vipul Singh Portfolio" />
         <meta
           property="og:description"
@@ -61,6 +39,7 @@ const Layout = ({ children }) => {
           property="og:image"
           content="https://www.vipulsingh.in.net/_next/image?url=%2FVipul.jpg&w=384&q=75"
         />
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Vipul Singh Portfolio" />
         <meta
@@ -73,17 +52,16 @@ const Layout = ({ children }) => {
         />
         <meta name="twitter:site" content="@VipulSi78066437" />
 
-        {/* ✅ Google site verification (keep yours) */}
+        {/* Google verification */}
         <meta
           name="google-site-verification"
           content="I2pXOuorfYJ07tKwD4rpvkSEx5UKuBWDmR9Jt3za1XM"
         />
 
-        {/* ⚙️ Build info injected (safe as comment instead of <style>) */}
+        {/* build info */}
         <meta name="build-info" content={process.env.BUILD_DATA} />
       </Head>
 
-      {/* ✅ Layout body */}
       <Header />
       <main className={classnames("overflow-x-hidden")}>{children}</main>
       <Footer />

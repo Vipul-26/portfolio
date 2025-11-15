@@ -19,6 +19,7 @@ body {
   background-color: var(--secondary-color);
   color: var(--tertiary-color);
   line-height: 1.2;
+  font-family: "Lucida Console", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -43,6 +44,10 @@ ol {
   position: relative;
   animation: bounce 0.5s normal linear;
   animation-iteration-count: 1;
+}
+
+button {
+  font-family: "Lucida Console", Helvetica, Arial, sans-serif;
 }
 
 @keyframes bounce {
