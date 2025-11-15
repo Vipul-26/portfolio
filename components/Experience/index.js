@@ -136,16 +136,6 @@ export default function Experience() {
           >
             <h4 className={styles.jobTitle}>
               <span>{current?.title}</span>
-              <span className={styles.jobCompany}>
-                <span>&nbsp;@&nbsp;</span>
-                <a
-                  href={current?.url}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  {current?.company}
-                </a>
-              </span>
             </h4>
 
             <h5 className={styles.jobDetail}>
